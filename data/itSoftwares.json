@@ -1,0 +1,90 @@
+{
+  "docIconMap": {
+    "active": true,
+    "mark": "💾"
+  },
+
+  "noteDocMetaPool": {
+    "active": true,
+    "noteDocMeta0": {
+      "active": true,
+      "label": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" ],
+      "value": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" ],
+      "prompt": "Wähle eine Unterkategorie",
+      "manualEntryNumber": false,
+      "nonExistEntryNumber": false,
+      "second": {
+        "active": true,
+        "Anwendungssoftware": {
+          "label": [ "Datenbank", "DBMS", "Internet", "Kommunikation", "Medienbearbeitung", "Produktiv", "Unterhaltung" ],
+          "value": [ "Datenbank", "DBMS", "Internet", "Kommunikation", "Medienbearbeitung", "Produktiv", "Unterhaltung" ],
+          "prompt": "Wähle die Anwendungssoftware Kategorie",
+          "manualEntryNumber": false,
+          "nonExistEntryNumber": false
+        },
+        "Betriebssystem": {
+          "label": [ "Android", "iOS", "Linux", "MacOS", "Windows" ],
+          "value": [ "Android", "iOS", "Linux", "MacOS", "Windows" ],
+          "prompt": "Wähle das Betriebssystem"
+        },
+        "Entwicklung": {
+          "label": [ "Build-Tools", "Compiler", "Debugging", "Interpreter", "Versionskontrolle" ],
+          "value": [ "Build-Tools", "Compiler", "Debugging", "Interpreter", "Versionskontrolle" ],
+          "prompt": "Wähle eine Entwicklungs Kategorie",
+          "manualEntryNumber": false,
+          "nonExistEntryNumber": false
+        },
+        "Systemsoftware": {
+          "label": [ "Firmware", "Treiber", "Utility" ],
+          "value": [ "Firmware", "Treiber", "Utility" ],
+          "prompt": "Wähle eine Systemsoftware Kategorie",
+          "manualEntryNumber": false,
+          "nonExistEntryNumber": false
+        },
+        "Virtualisierung": {
+          "label": [ "Container", "Virtual-Machine" ],
+          "value": [ "Container", "Virtual-Machine" ],
+          "prompt": "Wähle eine Virtualisierungs Art",
+          "manualEntryNumber": false,
+          "nonExistEntryNumber": false
+        }
+      }
+    }
+  },
+
+  "noteExpandPool": {
+    "active": true,
+    "noteExpand0": {
+      "active": true,
+      "label": [ "Software Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
+      "value":[ "eintragen", "unbekannt", "inexistent" ],
+      "manualEntryNumber": 0,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zum Softwarenamen",
+      "input": "Trage den Softwarename ein (verpflichtend)",
+      "printValue": "Softwarename"
+    },
+
+    "noteExpand1": {
+      "active": true,
+      "label": [ "irgendwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
+      "value":[ "eintragen", "unbekannt", "inexistent" ],
+      "manualEntryNumber": 0,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zum Softwarenamen",
+      "input": "Trage irgendwas ein (verpflichtend)",
+      "printValue": "Irgendwas"
+    },
+
+    "noteExpand2": {
+      "active": true,
+      "label": [ "irgendetwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
+      "value":[ "eintragen", "unbekannt", "inexistent" ],
+      "manualEntryNumber": 0,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zum Softwarenamen",
+      "input": "Trage irgendetwas ein (verpflichtend)",
+      "printValue": "Irgendetwas"
+    }
+  }
+}
