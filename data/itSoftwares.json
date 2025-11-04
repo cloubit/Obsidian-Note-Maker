@@ -6,6 +6,8 @@
 
   "noteDocMetaPool": {
     "active": true,
+    "internalReferencesActive": true,
+    "internalReferencesSelect": [0],
     "noteDocMeta0": {
       "active": true,
       "label": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" ],
@@ -54,11 +56,14 @@
 
   "noteExpandPool": {
     "active": true,
+    "internalReferencesActive": true,
+    "internalReferencesSelect": [0, 1, 2],
     "noteExpand0": {
       "active": true,
       "label": [ "Software Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
       "value":[ "eintragen", "unbekannt", "inexistent" ],
       "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
       "prompt": "Wähle einen Eintrag zum Softwarenamen",
       "input": "Trage den Softwarename ein (verpflichtend)",
@@ -70,6 +75,7 @@
       "label": [ "irgendwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
       "value":[ "eintragen", "unbekannt", "inexistent" ],
       "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
       "prompt": "Wähle einen Eintrag zum Softwarenamen",
       "input": "Trage irgendwas ein (verpflichtend)",
@@ -81,6 +87,7 @@
       "label": [ "irgendetwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
       "value":[ "eintragen", "unbekannt", "inexistent" ],
       "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
       "prompt": "Wähle einen Eintrag zum Softwarenamen",
       "input": "Trage irgendetwas ein (verpflichtend)",
