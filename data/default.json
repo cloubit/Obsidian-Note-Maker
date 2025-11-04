@@ -19,6 +19,7 @@
 
   "durabilityMap" : {
     "active": true,
+    "internalReferencesActive": true,
     "noteTemporaryLabel": "Befristet",
     "notePermanentlyLabel": "Dauerhaft",
     "noteTemporaryValue": "Befristet",
@@ -65,6 +66,7 @@
   },
 
   "noteMainRangePool": {
+    "internalReferencesActive": true,
     "label": ["Dienst", "Entwicklung", "Equipment", "Software", "IT-Umfeld"],
     "value": ["Service", "Development", "Item", "Software", "Environment"],
     "prompt": "Wähle die benötigte Notiz Kategorie",
@@ -85,6 +87,8 @@
 
   "noteMetaPool": {
     "active": true,
+    "internalReferencesActive": true,
+    "internalReferencesSelect": [2],
     "noteMeta0": {
       "active": true,
       "label": [ "öffentlich", "intern", "vertraulich", "persönlich", "geheim", "Andere Vertraulichkeit" ],
@@ -113,7 +117,7 @@
       "printValue": "Notiz Typ"
     }
   },
-  "shortDescription": {
+  "shortDescriptionMap": {
     "active": true,
     "prompt":"Erstelle eine inhaltliche Kurzbeschreibung (Teaser)"
   }
