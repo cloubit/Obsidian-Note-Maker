@@ -6,15 +6,14 @@
 
   "noteDocMetaPool": {
     "active": true,
-    "internalReferencesActive": true,
-    "internalReferencesSelect": [0],
     "noteDocMeta0": {
       "active": true,
-      "label": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" ],
-      "value": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" ],
+      "label": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" , "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" , "eintragen", "Inexistent (kein Vermerk in der Notiz)"],
       "prompt": "Wähle eine Unterkategorie",
-      "manualEntryNumber": false,
-      "nonExistEntryNumber": false,
+      "input": "Trage eine Kategorie ein (verpflichtend)",
+      "manualEntryNumber": 5,
+      "nonExistEntryNumber": 6,
       "second": {
         "active": true,
         "Anwendungssoftware": {
@@ -56,8 +55,6 @@
 
   "noteExpandPool": {
     "active": true,
-    "internalReferencesActive": true,
-    "internalReferencesSelect": [0, 1, 2],
     "noteExpand0": {
       "active": true,
       "label": [ "Software Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
@@ -92,6 +89,17 @@
       "prompt": "Wähle einen Eintrag zum Softwarenamen",
       "input": "Trage irgendetwas ein (verpflichtend)",
       "printValue": "Irgendetwas"
+    }
+  },
+  "internalReferencesMap": {
+    "active": true,
+    "noteDocMeta": {
+      "active": true,
+      "select": [0]
+    },
+    "noteExpand": {
+      "active": true,
+      "select": [0, 2]
     }
   }
 }
