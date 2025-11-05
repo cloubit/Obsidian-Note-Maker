@@ -1,46 +1,47 @@
 <%* await tp.file.include("[[./data/config]]");
-"use strict";
-// <!--- Datei default.json Parsen --->
+'use strict';
+// <!--- Note Auswahl, json Parsen und grundlegende Datentypen anlegen --->
 const defaultJsonPath = '' + TemplatePath + '/data/default.json';
 const fs = require('fs');
 const defaultJson = JSON.parse( fs.readFileSync(defaultJsonPath, 'utf8'));
-
-// <!--- Note Auswahl festlegen und selektierte JSON Datei parsen --->
-let noteMainRangePool = defaultJson.noteMainRangePool
-noteMainRange = await tp.system.suggester(noteMainRangePool.label, noteMainRangePool.value, false, noteMainRangePool.prompt);
+const noteMainRangePool = defaultJson.noteMainRangePool
+let noteMainRange = await tp.system.suggester(noteMainRangePool.label, noteMainRangePool.value, false, noteMainRangePool.prompt);
 const noteMainRangeSelected = noteMainRangePool[noteMainRange];
 const noteMainRangeJson = JSON.parse ( fs.readFileSync(TemplatePath + noteMainRangeSelected.noteMainRangeValue, 'utf8'));
-
-// <!--- variablen initialisieren --->
-let key = 0, noteTagsMap = defaultJson.noteTagsMap, noteBasicMap = defaultJson.noteBasicMap, noteSubTitleMap = defaultJson.noteSubTitleMap, docIconMap = noteMainRangeJson.docIconMap;
-
+const noteTagsMap = defaultJson.noteTagsMap;
+const noteBasicMap = defaultJson.noteBasicMap;
+const noteSubTitleMap = defaultJson.noteSubTitleMap;
+const docIconMap = noteMainRangeJson.docIconMap;
+let key = 0;
 // <!--- Note Datum eruiren --->
-let noteDateMap = defaultJson.noteDateMap;
+const noteDateMap = defaultJson.noteDateMap;
 const noteDateNow = tp.date.now(noteBasicMap.dateFormat);
 
 // <!--- Notiz Gültigkeit festlegen --->
-let durabilityMap = defaultJson.durabilityMap;
-durabilityLabel = [durabilityMap.notePermanentlyLabel, durabilityMap.noteTemporaryLabel]
-durabilityValue = [durabilityMap.notePermanentlyValue, durabilityMap.noteTemporaryValue]
+const durabilityMap = defaultJson.durabilityMap;
+let durabilityLabel = [durabilityMap.notePermanentlyLabel, durabilityMap.noteTemporaryLabel]
+let durabilityValue = [durabilityMap.notePermanentlyValue, durabilityMap.noteTemporaryValue]
 if (durabilityMap.active) {
   label = await tp.system.suggester(durabilityLabel, durabilityValue, false, durabilityMap.prompt);
 };
 durabilityValue = label;
 
 // <!--- Wenn Gültigkeit befristet, wird ein Enddatum festlegen --->
-let durabilityDateMap = defaultJson.durabilityDateMap;
-let durabilitySignMap = defaultJson.durabilitySignMap
+const durabilityDateMap = defaultJson.durabilityDateMap;
+const durabilitySignMap = defaultJson.durabilitySignMap
 if (durabilityValue === durabilityMap.noteTemporaryValue) {
 	durabilityDate = await tp.system.prompt(durabilityDateMap.prompt, tp.date.now(noteBasicMap.dateFormat, "P3M"));
-	while (!durabilityDate){durabilityDate = await tp.system.prompt(durabilityDateMap.prompt, tp.date.now(noteBasicMap.dateFormat, "P3M"));};
+	while (!durabilityDate){
+    durabilityDate = await tp.system.prompt(durabilityDateMap.prompt, tp.date.now(noteBasicMap.dateFormat, "P3M"));
+    };
 	noteSign = durabilitySignMap.noteSignTemporary;
 } else {
   noteSign = durabilitySignMap.noteSignPermanently
-  };
+};
 
 // <!--- Notiz Name festlegen und erstellen --->
-let docTitleMap = defaultJson.docTitleMap
-title = tp.file.title;
+const docTitleMap = defaultJson.docTitleMap
+let title = tp.file.title;
 while (title.startsWith("Untitled") || !title){title = await tp.system.prompt(docTitleMap.titleFieldInsert);};
 
 if (docIconMap.active && durabilitySignMap.active){
@@ -54,27 +55,32 @@ if (docIconMap.active && durabilitySignMap.active){
 };
 
 // <!--- Notiz Titel festlegen --->
-let noteTitleMap = defaultJson.noteTitleMap, docTitle;
+const noteTitleMap = defaultJson.noteTitleMap;
+let docTitle;
 if (noteTitleMap.active) {
   while (!docTitle){docTitle = await tp.system.prompt(noteTitleMap.docTitleFieldInsert);};
 };
 
 // <!--- Notiz-Aliases festlegen --->
-let aliasTitle = [], noteAliasMap = defaultJson.noteAliasMap;
+const noteAliasMap = defaultJson.noteAliasMap;
+let aliasTitle = [];
 if (noteAliasMap.active) {
   while (!aliasTitle[key]){aliasTitle[key] = await tp.system.prompt(noteAliasMap.aliasTitleFieldInsert0);};
   while (aliasTitle[key]){key++; aliasTitle[key] = await tp.system.prompt(noteAliasMap.aliasTitleFieldInsert1)};
 };
 
 // <!--- Notiz MetaPool eintragen --->
-let noteMeta = [], noteMetaLabel = [], noteMetaKey = 0, noteMetaPool = defaultJson.noteMetaPool;
+const noteMetaPool = defaultJson.noteMetaPool;
+let noteMeta = [], noteMetaLabel = [], noteMetaKey = 0;
 if (noteMetaPool.active) {
   for (const key in noteMetaPool) {
     if (Object.prototype.hasOwnProperty.call(noteMetaPool, key) && key.startsWith('noteMeta')) {
       noteMeta[noteMetaKey] = noteMetaPool[key]
       if (noteMetaPool[key].active) {
         label = await tp.system.suggester(noteMetaPool[key].label , noteMetaPool[key].value, false, noteMetaPool[key].prompt);
-          while (label === noteMetaPool[key].value[noteMetaPool[key].manualEntryNumber] || !label){label = await tp.system.prompt(noteMetaPool[key].input);};
+          while (label === noteMetaPool[key].value[noteMetaPool[key].manualEntryNumber] || !label){
+            label = await tp.system.prompt(noteMetaPool[key].input);
+            };
         noteMetaLabel[noteMetaKey] = (label);
         noteMetaKey++;
       };
@@ -83,7 +89,8 @@ if (noteMetaPool.active) {
 };
 
 // <!--- Dokument Kategorie und Unterkategorie erstellen ---
-let noteDocMeta = [], noteDocMetaLabel = [], noteDocMetaLabel1 = [], noteDocMetaKey = 0, noteDocMetaPool = noteMainRangeJson.noteDocMetaPool;
+const noteDocMetaPool = noteMainRangeJson.noteDocMetaPool
+let noteDocMeta = [], noteDocMetaLabel = [], noteDocMetaNonExist = [], noteDocMetaKey = 0;
 if (noteDocMetaPool.active) {
   for (const key in noteDocMetaPool) {
     if (Object.prototype.hasOwnProperty.call(noteDocMetaPool, key) && key.startsWith('noteDocMeta')) {
@@ -95,29 +102,34 @@ if (noteDocMetaPool.active) {
           while (!label){label = await tp.system.prompt(noteDocMetaPool[key].input);};
         };
         noteDocMetaLabel[noteDocMetaKey] = (label);
+        noteDocMetaNonExist[noteDocMetaKey] = (noteDocMetaPool[key].value[noteDocMetaPool[key].nonExistEntryNumber]);
         noteDocMetaKey++;
       };
-      if (noteDocMetaPool[key].second.active) {
-        const selected = noteMainRangeJson.noteDocMetaPool[key].second[label];
-        if (selected) {label = await tp.system.suggester(selected.label, selected.value, false, selected.prompt);};
+      let selected = noteMainRangeJson.noteDocMetaPool[key].second[label];
+      let manualEntry = noteDocMetaPool[key].value[noteDocMetaPool[key].manualEntryNumber]
+      if (selected && noteDocMetaPool[key].second.active && selected !== manualEntry) {
+        label = await tp.system.suggester(selected.label, selected.value, false, selected.prompt);
         noteDocMetaLabel[noteDocMetaKey] = (label);
-        noteDocMetaLabel1[noteDocMetaKey]
-        noteDocMetaKey++;
       };
     };
   };
 };
 
 // <!--- Erweiterte Notiz Informationen erstellen --->
-let noteExpand = [], noteExpandLabel = [], noteExpandKey = 0, noteExpandPool = noteMainRangeJson.noteExpandPool;
+const noteExpandPool = noteMainRangeJson.noteExpandPool;
+let noteExpand = [], noteExpandLabel = [], noteExpandUnknown = [], noteExpandNonExist = [], noteExpandKey = 0;
 if (noteExpandPool.active) {
   for (const key in noteExpandPool) {
     if (Object.prototype.hasOwnProperty.call(noteExpandPool, key) && key.startsWith('noteExpand')) {
       noteExpand[noteExpandKey] = noteExpandPool[key];
       if (noteExpandPool[key].active) {
         label = await tp.system.suggester(noteExpandPool[key].label , noteExpandPool[key].value, false, noteExpandPool[key].prompt);
-          while (label === noteExpandPool[key].value[noteExpandPool[key].manualEntryNumber] || !label){label = await tp.system.prompt(noteExpandPool[key].input);};
+          while (label === noteExpandPool[key].value[noteExpandPool[key].manualEntryNumber] || !label){
+            label = await tp.system.prompt(noteExpandPool[key].input);
+          };
         noteExpandLabel[noteExpandKey] = (label);
+        noteExpandUnknown[noteExpandKey] = noteExpandPool[key].value[noteExpandPool[key].unknownEntryNumber];
+        noteExpandNonExist[noteExpandKey] = noteExpandPool[key].value[noteExpandPool[key].nonExistEntryNumber];
         noteExpandKey++;
       };
     };
@@ -157,121 +169,167 @@ if (noteSourcesMap && noteSourcesMap.active){
 };
 
 // <!--- Notiz-Teaser erstellen --->
-let shortDescriptionMap = defaultJson.shortDescriptionMap, shortDescriptionContent;
- while (shortDescriptionMap.active && !shortDescriptionContent) {shortDescriptionContent = await tp.system.prompt(shortDescriptionMap.prompt);};
-// <!------------------------------------ Beginn Spielwiese ------------------------------------>
-// <!------------------------------------- Ende Spielwiese ------------------------------------->
+const shortDescriptionMap = defaultJson.shortDescriptionMap;
+let shortDescriptionContent;
+while (shortDescriptionMap.active && !shortDescriptionContent) {
+  shortDescriptionContent = await tp.system.prompt(shortDescriptionMap.prompt);
+  };
 
-// <!--- Notiz Ausgabe erstellen --->
+// <!--- Notiz Ausgaben schreiben--->
 tR += `---\n`;
-// <!--- Ausgabe von - Erstellungsdatum der Notiz --->
+// <!--- Erstellungsdatum der Notiz schreiben--->
 if (noteDateMap.active) {
   tR += `${noteDateMap.createdOn} ${noteDateNow}\n`
 };
 if (durabilityMap.active) {tR += `${durabilityMap.printValue}: ${durabilityValue}\n`;};
-if (durabilityMap.active && durabilityMap.active && durabilityValue === durabilityMap.noteTemporaryValue){tR += `${durabilityDateMap.printValue}: ${durabilityDate}\n`;};
+if (durabilityMap.active && durabilityMap.active && durabilityValue === durabilityMap.noteTemporaryValue){
+  tR += `${durabilityDateMap.printValue}: ${durabilityDate}\n`;
+};
 
-// <!--- Ausgabe von - Notiz Optionen eintragen --->
+// <!--- Notiz Optionen schreiben --->
 if (noteMetaPool.active){
   for (let i = 0; i < noteMeta.length; i++) {tR += `${noteMeta[i].printValue}: ${noteMetaLabel[i]}\n`};
 };
-// <!--- Ausgabe von - Notiz-Aliases eintragen --->
+// <!--- Notiz-Aliases schreiben --->
 if (noteAliasMap.active){
   tR += `${defaultJson.noteAliasMap.alias}:\n`
   for (let i = 0; i < aliasTitle.length; i++) {if (aliasTitle[i] !== ""){tR += `  - ${aliasTitle[i]}\n`};};
 };
-// <!--- Ausgabe von - Notiz-Tags eintragen --->
+// <!--- Notiz-Tags schreiben --->
 if (noteTagsMap.active) {
   tR += `${noteTagsMap.tags}:
   - ${noteMainRange}\n`;
 };
+// <!------------------------------------ Beginn Spielwiese ------------------------------------>
 if (noteTagsMap.active && noteDocMetaPool.active) {
-  for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== ""){tR += `  - ${noteDocMetaLabel[i]}\n`};};
+  for (let i = 0; i < noteDocMetaLabel.length; i++) {
+    if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `  - ${noteDocMetaLabel[i]}\n`};
+  };
 };
+// <!------------------------------------- Ende Spielwiese ------------------------------------->
 tR += `---\n`
 if (noteTitleMap.active && docTitleMap.active || noteTitleMap.active && !docTitleMap.active) {
   tR += `# ${docTitle}\n---\n`
 } else if (!noteTitleMap.active && docTitleMap.active) {
   tR += `# ${title}\n---\n`
-} else {};
+};
 
-// <!--- Ausgabe von - Notiz-Teaser eintragen --->
+// <!--- Untertitel und Notiz-Teaser schreiben --->
 if (noteSubTitleMap.active && shortDescriptionMap.active) {
   tR += `\n## ${noteSubTitleMap.shortDescriptionTitle}\n---\n${shortDescriptionContent}\n`;
 } else if (!noteSubTitleMap.active && shortDescription.active) {
   tR += `\n${shortDescriptionContent}\n`;
 } else if (noteSubTitleMap.active && !shortDescriptionMap.active) {
   tR += `\n## ${noteSubTitleMap.shortDescriptionTitle}\n---\n`;
-} else {};
-// <!------------------------------------ Beginn Spielwiese ------------------------------------>
-// <!------------------------------------- Ende Spielwiese ------------------------------------->
+};
 
-// <!--- Ausgabe von erweiterten Informationen eintragen --->
+// <!--- Untertitel und erweiterte Informationen schreiben --->
 if (noteSubTitleMap.active && noteExpandPool.active){
-tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n<table class=tabelle1>
-<tr><th >Kategorie</th><th>Wert</th></tr>\n`;
-// <!--- Ausgabe von - Notiz Optionen in die Tabelle eintragen --->
-for (let i = 0; i < noteExpand.length; i++) {if (noteExpandLabel[i] === noteExpand[i].value[noteExpand[i].nonExistEntryNumber]){} else {tR += `<tr><td>${noteExpand[i].printValue}:</td><td>${noteExpandLabel[i]}</td></tr>\n`;};};
-tR += `</table>\n`;
-} else if (!noteSubTitleMap.active && noteExpandPool.active){
-tR += `\n<table class=tabelle1>
-<tr><th >Kategorie</th><th>Wert</th></tr>\n`;
-// <!--- Ausgabe von - Notiz Optionen in die Tabelle eintragen --->
-for (let i = 0; i < noteExpand.length; i++) {if (noteExpandLabel[i] === noteExpand[i].value[noteExpand[i].nonExistEntryNumber]){} else {tR += `<tr><td>${noteExpand[i].printValue}:</td><td>${noteExpandLabel[i]}</td></tr>\n`;};};
-tR += `</table>\n`;
-} else {};
-if (noteSubTitleMap.active && noteSourcesMap.active){
-tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`
-  // <!--- Ausgabe von - Externen Quellen und Nachweisen eintragen --->
-  for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
-    if (sourcesUrl[i] && !urlHttp[i]){tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})&ensp;&ensp;&ensp;`
-    } else {
-      tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})&ensp;&ensp;&ensp;`
-      };
+    // <!--- Untertitel und Tabellen Head schreiben --->
+  tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n<table class=tabelle1>
+  <tr><th >Kategorie</th><th>Wert</th></tr>\n`;
+  // <!--- Notiz Optionen in die Tabelle schreiben --->
+  for (let i = 0; i < noteExpand.length; i++) {if (noteExpandLabel[i] !== noteExpandNonExist[i]){
+    tR += `<tr><td>${noteExpand[i].printValue}:</td><td>${noteExpandLabel[i]}</td></tr>\n`;};
   };
+  tR += `</table>\n`;
+} else if (!noteSubTitleMap.active && noteExpandPool.active){
+  tR += `\n<table class=tabelle1>
+  <tr><th >Kategorie</th><th>Wert</th></tr>\n`;
+  // <!--- Notiz Optionen in die Tabelle schreiben--->
+  for (let i = 0; i < noteExpand.length; i++) {if (noteExpandLabel[i] !== noteExpandNonExist[i]){
+    tR += `<tr><td>${noteExpand[i].printValue}:</td><td>${noteExpandLabel[i]}</td></tr>\n`;};
+  };
+  tR += `</table>\n`;
+} else if (noteSubTitleMap.active && !noteExpandPool.active){
+  tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n`;
+};
+
+// <!--- Untertitel und externen Quellen und Nachweise schreiben --->
+  if (noteSubTitleMap.active && noteSourcesMap.active){
+  tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`
+    // <!--- Externen Quellen und Nachweise Schreiben --->
+    for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
+      if (sourcesUrl[i] && !urlHttp[i]){tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})&ensp;&ensp;&ensp;`
+      } else {
+        tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})&ensp;&ensp;&ensp;`
+        };
+    };
 } else if (!noteSubTitleMap.active && noteSourcesMap.active){
-  // <!--- Ausgabe von - Externen Quellen und Nachweisen eintragen --->
+  // <!--- Externen Quellen und Nachweise schreiben --->
   for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
     if (sourcesUrl[i] && !urlHttp[i]){
       tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})&ensp;&ensp;&ensp;`
       } else {tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})&ensp;&ensp;&ensp;`
       };
   };
-} else {};
+} else if (noteSubTitleMap.active && !noteSourcesMap.active){
+  tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`;
+};
 
+// <!--- Untertitel und interne Verweise schreiben --->
+const intRefDefault = defaultJson.internalReferencesMap;
+const intRefMainRange = noteMainRangeJson.internalReferencesMap;
+if (noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
+  // <!--- Untertitel schreiben --->
+  tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n`;
+  // <!--- Interne Verweise schreiben --->
+  if (durabilityMap.active && intRefDefault.active && intRefDefault.durability.active) {
+    tR += `[[${durabilityValue}]], `;
+  if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
+    intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
+    intRefMainRange.noteExpand.select.forEach(i => { tR += `[[${noteMetaLabel[i]}]], ` });
+  };
+  if (intRefDefault.active) {
+    tR += `[[${noteMainRange}]], `;
+  };
 // <!------------------------------------ Beginn Spielwiese ------------------------------------>
+  if (noteDocMetaPool.active && intRefMainRange.active && intRefMainRange.noteDocMeta.active) {
+    for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `[[${noteDocMetaLabel[i]}]], `};};
+  };
 
+// <!------------------------------------- Ende Spielwiese ------------------------------------->
+  if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
+    for (let i = 0; i < noteExpand.length; i++) {
+      if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
+    };
+    // intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
+    // intRefMainRange.noteExpand.select.forEach(i => {
+      // if (noteExpandLabel[i] !== noteExpandUnknown[i] || noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
+    // });
+  };
+};
+} else if (!noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
+  // <!--- Interne Verweise schreiben --->
+  if (durabilityMap.active && intRefDefault.active && intRefDefault.durability.active) {
+    tR += `[[${durabilityValue}]], `;
+  };
+  if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
+    intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
+    intRefDefault.noteMeta.select.forEach(i => { tR += `[[${noteMetaLabel[i]}]], ` });
+  };
+  if (intRefDefault.active) {
+    tR += `[[${noteMainRange}]], `;
+  };
+  // <!------------------------------------ Beginn Spielwiese ------------------------------------>
+  if (noteDocMetaPool.active && intRefMainRange.active && intRefMainRange.noteDocMeta.active) {
+    for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `[[${noteDocMetaLabel[i]}]], `};};
+  };
 
-
-if (noteSubTitleMap.active) {
+// <!------------------------------------- Ende Spielwiese ------------------------------------->
+  if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
+    for (let i = 0; i < noteExpand.length; i++) {
+      if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
+    };
+    // intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
+    // intRefMainRange.noteExpand.select.forEach(i => {
+    //   if (noteExpandLabel[i] !== noteExpandUnknown[i] || noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
+    // });
+  };
+} else if (noteSubTitleMap.active && !intRefDefault.active && !intRefMainRange.active) {
   tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n`;
 };
 
-if (durabilityMap.internalReferencesActive) {
-  tR += `[[${durabilityValue}]], `;
-};
-
-if (noteMetaPool.active && noteMetaPool.internalReferencesActive) {
-  noteMetaPool.internalReferencesSelect.map(i => noteMetaLabel[i]); noteMetaPool.internalReferencesSelect.forEach(i => { tR += `[[${noteMetaLabel[i]}]], ` });
-};
-
-if (noteMainRangePool.internalReferencesActive) {
-  tR += `[[${noteMainRange}]], `;
-};
-
-if (noteDocMetaPool.active && noteDocMetaPool.internalReferencesActive) {
-  for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== ""){tR += `[[${noteDocMetaLabel[i]}]], `};};
-};
-
-if (noteExpandPool.active && noteExpandPool.internalReferencesActive) {
-  noteExpandPool.internalReferencesSelect.map(i => noteExpandLabel[i]);
-  noteExpandPool.internalReferencesSelect.forEach(i => {
-    if (noteExpandLabel[i] === noteExpand[i].value[noteExpand[i].unknownEntryNumber] || noteExpandLabel[i] === noteExpand[i].value[noteExpand[i].nonExistEntryNumber]) {
-    } else {tR += `[[${noteExpandLabel[i]}]], `;}
-  });
-};
-
-
-
+// <!------------------------------------ Beginn Spielwiese ------------------------------------>
 // <!------------------------------------- Ende Spielwiese ------------------------------------->
 %>
