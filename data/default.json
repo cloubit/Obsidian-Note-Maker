@@ -87,27 +87,33 @@
     "active": true,
     "noteMeta0": {
       "active": true,
-      "label": [ "öffentlich", "intern", "vertraulich", "persönlich", "geheim", "Andere Vertraulichkeit" ],
-      "value": [ "öffentlich", "intern", "vertraulich", "persönlich", "geheim", "eigene" ],
+      "label": ["öffentlich", "intern", "vertraulich", "persönlich", "geheim", "Andere Vertraulichkeit" , "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["öffentlich", "intern", "vertraulich", "persönlich", "geheim", "eigene", "inexistent"],
       "manualEntryNumber": 5,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 6,
       "prompt": "Wähle eine Vertraulichkeitsstufe",
       "input": "Trage eine eigene Vertraulichkeitsstufe ein (verpflichtend)",
       "printValue": "Vertraulichkeit"
     },
     "noteMeta1": {
       "active": true,
-      "label": [ "Thomas Sterchi", "Anderer Notiz Ersteller" ],
-      "value": [ "Thomas Sterchi", "anderer" ],
+      "label": ["Thomas Sterchi", "Anderer Notiz Ersteller", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Thomas Sterchi", "anderer", "inexistent"],
       "manualEntryNumber": 1,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 2,
       "prompt": "Wähle ein Notiz ersteller",
       "input": "Trage ein Notiz Ersteller ein (verpflichtend)",
       "printValue": "Notiz Ersteller"
     },
     "noteMeta2": {
       "active": true,
-      "label": [ "Anforderung", "Anleitung", "Architektur", "Beschreibung", "Brainstorming", "Diagramm", "Dokumentation", "Entwurf", "Idee", "Konfiguration", "Konzept", "Notiz", "Programm-Code", "Protokoll", "Skizze", "Spezifikation", "ToDo-Liste","Vorgabe", "Zusammenfassung", "Anderer Dokumenten-Typ eintragen" ],
-      "value": [ "Anforderung", "Anleitung", "Architektur", "Beschreibung", "Brainstorming", "Diagramm", "Dokumentation", "Entwurf", "Idee", "Konfiguration", "Konzept", "Notiz", "Programm-Code", "Protokoll", "Skizze", "Spezifikation", "ToDo-Liste","Vorgabe", "Zusammenfassung", "anderer" ],
+      "label": ["Anforderung", "Anleitung", "Architektur", "Beschreibung", "Brainstorming", "Diagramm", "Dokumentation", "Entwurf", "Idee", "Konfiguration", "Konzept", "Notiz", "Programm-Code", "Protokoll", "Skizze", "Spezifikation", "ToDo-Liste","Vorgabe", "Zusammenfassung", "Anderer Dokumenten-Typ eintragen"],
+      "value": ["Anforderung", "Anleitung", "Architektur", "Beschreibung", "Brainstorming", "Diagramm", "Dokumentation", "Entwurf", "Idee", "Konfiguration", "Konzept", "Notiz", "Programm-Code", "Protokoll", "Skizze", "Spezifikation", "ToDo-Liste","Vorgabe", "Zusammenfassung", "anderer", "inexistent"],
       "manualEntryNumber": 19,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 20,
       "prompt": "Wähle ein Dokumenten-Typ",
       "input": "Trage ein Dokument-Typ ein (verpflichtend)",
       "printValue": "Notiz Typ"
@@ -120,7 +126,6 @@
 
   "internalReferencesMap": {
     "active": true,
-
     "durability": {
       "active": true
     },
