@@ -8,46 +8,59 @@
     "active": true,
     "noteDocMeta0": {
       "active": true,
-      "label": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" , "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
-      "value": [ "Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" , "eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "label": ["Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" , "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Anwendungssoftware", "Betriebssystem", "Entwicklung", "Systemsoftware", "Virtualisierung" , "eintragen", "inexistent"],
       "prompt": "Wähle eine Unterkategorie",
       "input": "Trage eine Kategorie ein (verpflichtend)",
       "manualEntryNumber": 5,
+      "unknownEntryNumber": null,
       "nonExistEntryNumber": 6,
       "second": {
         "active": true,
         "Anwendungssoftware": {
-          "label": [ "Datenbank", "DBMS", "Internet", "Kommunikation", "Medienbearbeitung", "Produktiv", "Unterhaltung" ],
-          "value": [ "Datenbank", "DBMS", "Internet", "Kommunikation", "Medienbearbeitung", "Produktiv", "Unterhaltung" ],
+          "label": ["Datenbank", "DBMS", "Internet", "Kommunikation", "Medienbearbeitung", "Produktiv", "Unterhaltung", "Eigene Anwendungssoftware eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Datenbank", "DBMS", "Internet", "Kommunikation", "Medienbearbeitung", "Produktiv", "Unterhaltung", "eintragen", "inexistent"],
           "prompt": "Wähle die Anwendungssoftware Kategorie",
-          "manualEntryNumber": false,
-          "nonExistEntryNumber": false
+          "input": "Trage eine Anwendungssoftware ein (verpflichtend)",
+          "manualEntryNumber": 7,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 8
         },
         "Betriebssystem": {
-          "label": [ "Android", "iOS", "Linux", "MacOS", "Windows" ],
-          "value": [ "Android", "iOS", "Linux", "MacOS", "Windows" ],
-          "prompt": "Wähle das Betriebssystem"
+          "label": ["Android", "iOS", "Linux", "MacOS", "Windows", "Plattformunabhängig", "Eigenes Betriebssystem eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Android", "iOS", "Linux", "MacOS", "Windows", "Plattformunabhängig", "eintragen", "inexistent"],
+          "prompt": "Wähle das Betriebssystem",
+          "input": "Trage ein Betriebssystem ein (verpflichtend)",
+          "manualEntryNumber": 6,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 7
         },
         "Entwicklung": {
-          "label": [ "Build-Tools", "Compiler", "Debugging", "Interpreter", "Versionskontrolle" ],
-          "value": [ "Build-Tools", "Compiler", "Debugging", "Interpreter", "Versionskontrolle" ],
+          "label": ["Build-Tools", "Compiler", "Debugging", "Interpreter", "Versionskontrolle", "Eigenes Entwicklungssystem eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Build-Tools", "Compiler", "Debugging", "Interpreter", "Versionskontrolle", "eintragen", "inexistent"],
           "prompt": "Wähle eine Entwicklungs Kategorie",
-          "manualEntryNumber": false,
-          "nonExistEntryNumber": false
+          "input": "Trage ein Entwicklungssystem ein (verpflichtend)",
+          "manualEntryNumber": 5,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 6
         },
         "Systemsoftware": {
-          "label": [ "Firmware", "Treiber", "Utility" ],
-          "value": [ "Firmware", "Treiber", "Utility" ],
+          "label": ["Firmware", "Treiber", "Utility", "Eigene Systemsoftware eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Firmware", "Treiber", "Utility", "eintragen", "inexistent"],
           "prompt": "Wähle eine Systemsoftware Kategorie",
-          "manualEntryNumber": false,
-          "nonExistEntryNumber": false
+          "input": "Trage eine Systemsoftware ein (verpflichtend)",
+          "manualEntryNumber": 3,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 4
         },
         "Virtualisierung": {
-          "label": [ "Container", "Virtual-Machine" ],
-          "value": [ "Container", "Virtual-Machine" ],
+          "label": ["Container", "Virtual-Machine", "Eigene Virtualisierungsumgebung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Container", "Virtual-Machine", "eintragen", "inexistent"],
           "prompt": "Wähle eine Virtualisierungs Art",
-          "manualEntryNumber": false,
-          "nonExistEntryNumber": false
+          "input": "Trage eine Virtualisierungsumgebung ein (verpflichtend)",
+          "manualEntryNumber": 2,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 3
         }
       }
     }
@@ -57,8 +70,8 @@
     "active": true,
     "noteExpand0": {
       "active": true,
-      "label": [ "Software Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
-      "value":[ "eintragen", "unbekannt", "inexistent" ],
+      "label": ["Software Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -66,11 +79,10 @@
       "input": "Trage den Softwarename ein (verpflichtend)",
       "printValue": "Softwarename"
     },
-
     "noteExpand1": {
       "active": true,
-      "label": [ "irgendwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
-      "value":[ "eintragen", "unbekannt", "inexistent" ],
+      "label": ["irgendwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -78,11 +90,10 @@
       "input": "Trage irgendwas ein (verpflichtend)",
       "printValue": "Irgendwas"
     },
-
     "noteExpand2": {
       "active": true,
-      "label": [ "irgendetwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)" ],
-      "value":[ "eintragen", "unbekannt", "inexistent" ],
+      "label": ["irgendetwas Name eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
