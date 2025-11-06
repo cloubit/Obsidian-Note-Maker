@@ -65,23 +65,29 @@ if (noteTitleMap.active) {
 const noteAliasMap = defaultJson.noteAliasMap;
 let aliasTitle = [];
 if (noteAliasMap.active) {
-  while (!aliasTitle[key]){aliasTitle[key] = await tp.system.prompt(noteAliasMap.aliasTitleFieldInsert0);};
-  while (aliasTitle[key]){key++; aliasTitle[key] = await tp.system.prompt(noteAliasMap.aliasTitleFieldInsert1)};
+  while (!aliasTitle[key]){
+    aliasTitle[key] = await tp.system.prompt(noteAliasMap.aliasTitleFieldInsert0);
+    };
+  while (aliasTitle[key]){
+    key++; aliasTitle[key] = await tp.system.prompt(noteAliasMap.aliasTitleFieldInsert1)
+  };
 };
 
 // <!--- Notiz MetaPool eintragen --->
 const noteMetaPool = defaultJson.noteMetaPool;
-let noteMeta = [], noteMetaLabel = [], noteMetaKey = 0;
+let noteMeta = [], noteMetaLabel = [], noteMetaUnknown = [], noteMetaNonExist = [], noteMetaKey = 0;
 if (noteMetaPool.active) {
   for (const key in noteMetaPool) {
     if (Object.prototype.hasOwnProperty.call(noteMetaPool, key) && key.startsWith('noteMeta')) {
       noteMeta[noteMetaKey] = noteMetaPool[key]
       if (noteMetaPool[key].active) {
         label = await tp.system.suggester(noteMetaPool[key].label , noteMetaPool[key].value, false, noteMetaPool[key].prompt);
-          while (label === noteMetaPool[key].value[noteMetaPool[key].manualEntryNumber] || !label){
-            label = await tp.system.prompt(noteMetaPool[key].input);
-            };
+        while (label === noteMetaPool[key].value[noteMetaPool[key].manualEntryNumber] || !label){
+          label = await tp.system.prompt(noteMetaPool[key].input);
+        };
         noteMetaLabel[noteMetaKey] = (label);
+        noteMetaUnknown[noteMetaKey] = noteMetaPool[key].value[noteMetaPool[key].unknownEntryNumber];
+        noteMetaNonExist[noteMetaKey] = (noteMetaPool[key].value[noteMetaPool[key].nonExistEntryNumber]);
         noteMetaKey++;
       };
     };
@@ -90,7 +96,7 @@ if (noteMetaPool.active) {
 
 // <!--- Dokument Kategorie und Unterkategorie erstellen ---
 const noteDocMetaPool = noteMainRangeJson.noteDocMetaPool
-let noteDocMeta = [], noteDocMetaLabel = [], noteDocMetaNonExist = [], noteDocMetaKey = 0;
+let noteDocMeta = [], noteDocMetaLabel = [], noteDocMetaUnknown = [],noteDocMetaNonExist = [], noteDocMetaKey = 0;
 if (noteDocMetaPool.active) {
   for (const key in noteDocMetaPool) {
     if (Object.prototype.hasOwnProperty.call(noteDocMetaPool, key) && key.startsWith('noteDocMeta')) {
@@ -102,6 +108,7 @@ if (noteDocMetaPool.active) {
           while (!label){label = await tp.system.prompt(noteDocMetaPool[key].input);};
         };
         noteDocMetaLabel[noteDocMetaKey] = (label);
+        noteDocMetaUnknown[noteDocMetaKey] = noteDocMetaPool[key].value[noteDocMetaPool[key].unknownEntryNumber];
         noteDocMetaNonExist[noteDocMetaKey] = (noteDocMetaPool[key].value[noteDocMetaPool[key].nonExistEntryNumber]);
         noteDocMetaKey++;
       };
@@ -109,7 +116,13 @@ if (noteDocMetaPool.active) {
       let manualEntry = noteDocMetaPool[key].value[noteDocMetaPool[key].manualEntryNumber]
       if (selected && noteDocMetaPool[key].second.active && selected !== manualEntry) {
         label = await tp.system.suggester(selected.label, selected.value, false, selected.prompt);
+         if (label === noteDocMetaPool[key].value[noteDocMetaPool[key].manualEntryNumber]) {
+          label = await tp.system.prompt(selected.input);
+          while (!label){label = await tp.system.prompt(selected.input);};
+        };
         noteDocMetaLabel[noteDocMetaKey] = (label);
+        noteDocMetaUnknown[noteDocMetaKey] = noteDocMetaPool[key].value[noteDocMetaPool[key].unknownEntryNumber];
+        noteDocMetaNonExist[noteDocMetaKey] = (noteDocMetaPool[key].value[noteDocMetaPool[key].nonExistEntryNumber]);
       };
     };
   };
@@ -188,7 +201,9 @@ if (durabilityMap.active && durabilityMap.active && durabilityValue === durabili
 
 // <!--- Notiz Optionen schreiben --->
 if (noteMetaPool.active){
-  for (let i = 0; i < noteMeta.length; i++) {tR += `${noteMeta[i].printValue}: ${noteMetaLabel[i]}\n`};
+  for (let i = 0; i < noteMeta.length; i++) {
+    if (noteMetaLabel[i] !== noteMetaNonExist[i]){tR += `${noteMeta[i].printValue}: ${noteMetaLabel[i]}\n`};
+  };
 };
 // <!--- Notiz-Aliases schreiben --->
 if (noteAliasMap.active){
@@ -200,13 +215,11 @@ if (noteTagsMap.active) {
   tR += `${noteTagsMap.tags}:
   - ${noteMainRange}\n`;
 };
-// <!------------------------------------ Beginn Spielwiese ------------------------------------>
 if (noteTagsMap.active && noteDocMetaPool.active) {
   for (let i = 0; i < noteDocMetaLabel.length; i++) {
     if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `  - ${noteDocMetaLabel[i]}\n`};
   };
 };
-// <!------------------------------------- Ende Spielwiese ------------------------------------->
 tR += `---\n`
 if (noteTitleMap.active && docTitleMap.active || noteTitleMap.active && !docTitleMap.active) {
   tR += `# ${docTitle}\n---\n`
@@ -278,25 +291,19 @@ if (noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
     tR += `[[${durabilityValue}]], `;
   if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
     intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
-    intRefMainRange.noteExpand.select.forEach(i => { tR += `[[${noteMetaLabel[i]}]], ` });
+    intRefDefault.noteMeta.select.forEach(i => { if (noteMetaLabel[i] !== noteMetaUnknown[i] && noteMetaLabel[i] !== noteMetaNonExist[i]) {tR += `[[${noteMetaLabel[i]}]], `;} });
   };
   if (intRefDefault.active) {
     tR += `[[${noteMainRange}]], `;
   };
-// <!------------------------------------ Beginn Spielwiese ------------------------------------>
   if (noteDocMetaPool.active && intRefMainRange.active && intRefMainRange.noteDocMeta.active) {
-    for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `[[${noteDocMetaLabel[i]}]], `};};
+    // for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `[[${noteDocMetaLabel[i]}]], `};};
+    intRefMainRange.noteDocMeta.select.map(i => noteDocMetaLabel[i]);
+    intRefMainRange.noteDocMeta.select.forEach(i => {if (noteDocMetaLabel[i] !== noteDocMetaUnknown[i] && noteDocMetaLabel[i] !== noteDocMetaNonExist[i]) {tR += `[[${noteDocMetaLabel[i]}]], `;} });
   };
-
-// <!------------------------------------- Ende Spielwiese ------------------------------------->
   if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
-    for (let i = 0; i < noteExpand.length; i++) {
-      if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
-    };
-    // intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
-    // intRefMainRange.noteExpand.select.forEach(i => {
-      // if (noteExpandLabel[i] !== noteExpandUnknown[i] || noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
-    // });
+    intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
+    intRefMainRange.noteExpand.select.forEach(i => {if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;} });
   };
 };
 } else if (!noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
@@ -306,30 +313,21 @@ if (noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
   };
   if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
     intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
-    intRefDefault.noteMeta.select.forEach(i => { tR += `[[${noteMetaLabel[i]}]], ` });
+    intRefDefault.noteMeta.select.forEach(i => { if (noteMetaLabel[i] !== noteMetaUnknown[i] && noteMetaLabel[i] !== noteMetaNonExist[i]) {tR += `[[${noteMetaLabel[i]}]], `;} });
   };
   if (intRefDefault.active) {
     tR += `[[${noteMainRange}]], `;
   };
-  // <!------------------------------------ Beginn Spielwiese ------------------------------------>
   if (noteDocMetaPool.active && intRefMainRange.active && intRefMainRange.noteDocMeta.active) {
-    for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `[[${noteDocMetaLabel[i]}]], `};};
+    // for (let i = 0; i < noteDocMetaLabel.length; i++) {if (noteDocMetaLabel[i] !== noteDocMetaNonExist[i]){tR += `[[${noteDocMetaLabel[i]}]], `};};
+    intRefMainRange.noteDocMeta.select.map(i => noteDocMetaLabel[i]);
+    intRefMainRange.noteDocMeta.select.forEach(i => {if (noteDocMetaLabel[i] !== noteDocMetaUnknown[i] && noteDocMetaLabel[i] !== noteDocMetaNonExist[i]) {tR += `[[${noteDocMetaLabel[i]}]], `;} });
   };
-
-// <!------------------------------------- Ende Spielwiese ------------------------------------->
   if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
-    for (let i = 0; i < noteExpand.length; i++) {
-      if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
-    };
-    // intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
-    // intRefMainRange.noteExpand.select.forEach(i => {
-    //   if (noteExpandLabel[i] !== noteExpandUnknown[i] || noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;}
-    // });
+    intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
+    intRefMainRange.noteExpand.select.forEach(i => {if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${noteExpandLabel[i]}]], `;} });
   };
 } else if (noteSubTitleMap.active && !intRefDefault.active && !intRefMainRange.active) {
   tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n`;
 };
-
-// <!------------------------------------ Beginn Spielwiese ------------------------------------>
-// <!------------------------------------- Ende Spielwiese ------------------------------------->
 %>
