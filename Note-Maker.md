@@ -312,17 +312,17 @@ if (noteSubTitleMap.active && noteExpandPool.active){
   tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`
     // External sources and references writing
     for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
-      if (sourcesUrl[i] && !urlHttp[i]){tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})/n`
+      if (sourcesUrl[i] && !urlHttp[i]){tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})\n`
       } else {
-        tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})/n`
+        tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})\n`
         };
     };
 } else if (!noteSubTitleMap.active && noteSourcesMap.active){
   // External sources and references writing
   for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
     if (sourcesUrl[i] && !urlHttp[i]){
-      tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})/n`
-      } else {tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})/n`
+      tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})\n`
+      } else {tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})\n`
       };
   };
 } else if (noteSubTitleMap.active && !noteSourcesMap.active){
