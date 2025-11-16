@@ -7,8 +7,10 @@
 Ein Script zur Erstellung individueller Obsidian Notizen.
 
 **Voraussetzungen:**
+
 -  Obsidian
 -  Externe Erweiterung: Obsidian-Templater
+
 
 **Installation**
 
@@ -21,10 +23,13 @@ Ein Script zur Erstellung individueller Obsidian Notizen.
 7. Schliesse die Einstellungen.
 8. Erstelle deine erste Notiz mit dem Tastaturkürzel deiner Wahl und wähle "Note-Maker".
 
+
 **Fehlerbehebung**
+
 Wird die Notiz mit dem Fehler `Template Parsing error, aborting` abgebrochen, ist der Pfad in der Datei "config.md" anzupassen. 
 Hilfe bietet hier die Obsidian Console, die unter Mac mit `cmd + option + i`und unter Windows mit `ctrl + shift + i` aufgerufen werden kann.
 
 
 **English Version**
+
 A script for creating and manually customising Obsidian notes. Requires Obsidian Templater.
