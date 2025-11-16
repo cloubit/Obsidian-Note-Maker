@@ -1,6 +1,7 @@
 {
   "noteBasicMap": {
     "extLink": "🔗",
+    "contentMark":"🌐",
     "space": " ",
     "dateFormat": "YYYY-MM-DD",
     "durabilityPrintValue": "Gültigkeitsdauer",
@@ -47,6 +48,7 @@
   "noteSubTitleMap": {
     "active": true,
     "shortDescriptionTitle": "Inhaltliche Kurzbeschreibung",
+    "detailDescriptionTitle": "Ausführliche Informationen",
     "advancedInfoTitle": "Erweiterte Informationen:",
     "sourceTitle": "Externe Quellen und Nachweise:",
     "internalSourceTitle": "Interne Verweise:"
@@ -63,24 +65,44 @@
     "active": true,
     "tags": "Tags"
   },
-
-  "noteMainRangePool": {
-    "label": ["Dienst", "Entwicklung", "Equipment", "Software", "IT-Umfeld"],
-    "value": ["Service", "Development", "Item", "Software", "Environment"],
-    "prompt": "Wähle die benötigte Notiz Kategorie",
-    "Service": {"noteMainRangeValue": "/data/itServices.json"},
-    "Development": {"noteMainRangeValue": "/data/itDevelopment.json"},
-    "Item": {"noteMainRangeValue": "/data/itItem.json"},
-    "Software": {"noteMainRangeValue": "/data/itSoftwares.json"},
-    "Environment": {"noteMainRangeValue": "/data/itEnvironment.json"}
-  },
-
   "noteSourcesMap": {
     "active": true,
     "sourcesTitleFieldInsert0": "Trage den Titel der Quelle ein (verpflichtend)",
     "sourcesUrlFieldInsert0": "Trage die URL in Form von http://www.quelle-deiner-notiz.com ein (verpflichtend)",
     "sourcesTitleFieldInsert1": "Trage den Titel der Quelle ein (optional - Abbruch mit Enter)",
     "sourcesUrlFieldInsert1": "Trage die URL in Form von http://www.quelle-deiner-notiz.com ein (verpflichtend)"
+  },
+
+  "shortDescriptionMap": {
+    "active": true,
+    "prompt":"Erstelle eine inhaltliche Kurzbeschreibung (Teaser)"
+  },
+
+  "internalReferencesMap": {
+    "active": true,
+    "durability": {
+      "active": true
+    },
+    "noteMainRange": {
+      "active": true
+    },
+    "noteMeta": {
+      "active": true,
+      "select": [0]
+    }
+  },
+
+  "noteMainRangePool": {
+    "label": ["Dienst", "Entwicklung", "Equipment", "Software", "IT-Umfeld"],
+    "value": ["Service", "Development", "Item", "Software", "Environment"],
+    "prompt": "Wähle die benötigte Notiz Kategorie",
+    "selection": {
+      "Service": {"noteMainRangeValue": "/data/itServices.json"},
+      "Development": {"noteMainRangeValue": "/data/itDevelopment.json"},
+      "Item": {"noteMainRangeValue": "/data/itItem.json"},
+      "Software": {"noteMainRangeValue": "/data/itSoftwares.json"},
+      "Environment": {"noteMainRangeValue": "/data/itEnvironment.json"}
+    }
   },
 
   "noteMetaPool": {
@@ -103,38 +125,9 @@
       "manualEntryNumber": 1,
       "unknownEntryNumber": null,
       "nonExistEntryNumber": 2,
-      "prompt": "Wähle ein Notiz ersteller",
+      "prompt": "Wähle ein Notiz Ersteller",
       "input": "Trage ein Notiz Ersteller ein (verpflichtend)",
       "printValue": "Notiz Ersteller"
-    },
-    "noteMeta2": {
-      "active": true,
-      "label": ["Anforderung", "Anleitung", "Architektur", "Beschreibung", "Brainstorming", "Diagramm", "Dokumentation", "Entwurf", "Idee", "Konfiguration", "Konzept", "Notiz", "Programm-Code", "Protokoll", "Skizze", "Spezifikation", "ToDo-Liste","Vorgabe", "Zusammenfassung", "Anderer Dokumenten-Typ eintragen"],
-      "value": ["Anforderung", "Anleitung", "Architektur", "Beschreibung", "Brainstorming", "Diagramm", "Dokumentation", "Entwurf", "Idee", "Konfiguration", "Konzept", "Notiz", "Programm-Code", "Protokoll", "Skizze", "Spezifikation", "ToDo-Liste","Vorgabe", "Zusammenfassung", "anderer", "inexistent"],
-      "manualEntryNumber": 19,
-      "unknownEntryNumber": null,
-      "nonExistEntryNumber": 20,
-      "prompt": "Wähle ein Dokumenten-Typ",
-      "input": "Trage ein Dokument-Typ ein (verpflichtend)",
-      "printValue": "Notiz Typ"
-    }
-  },
-  "shortDescriptionMap": {
-    "active": true,
-    "prompt":"Erstelle eine inhaltliche Kurzbeschreibung (Teaser)"
-  },
-
-  "internalReferencesMap": {
-    "active": true,
-    "durability": {
-      "active": true
-    },
-    "noteMainRange": {
-      "active": true
-    },
-    "noteMeta": {
-      "active": true,
-      "select": [0, 2]
     }
   }
 }
