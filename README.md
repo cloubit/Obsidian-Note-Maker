@@ -26,5 +26,5 @@ Wird die Notiz mit dem Fehler `Template Parsing error, aborting` abgebrochen, is
 Hilfe bietet hier die Obsidian Console, die unter Mac mit `cmd + option + i`und unter Windows mit `ctrl + shift + i` aufgerufen werden kann.
 
 
-** English Version**
+**English Version**
 A script for creating and manually customising Obsidian notes. Requires Obsidian Templater.
