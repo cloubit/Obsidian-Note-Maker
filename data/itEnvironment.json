@@ -1,0 +1,160 @@
+{
+  "docIconMap": {
+    "active": true,
+    "mark": "📑"
+  },
+
+  "internalReferencesMap": {
+    "active": true,
+    "noteMetaDoc": {
+      "active": true,
+      "select": [0]
+    },
+    "noteMetaDocTag": {
+      "active": true,
+      "select": [0]
+    },
+    "noteExpand": {
+      "active": true,
+      "select": [2, 3, 4]
+    }
+  },
+
+  "noteMetaDocPool": {
+    "active": true,
+    "noteMetaDoc0": {
+      "active": true,
+      "label": ["Anforderung", "Architektur", "Beschreibung", "Diagramm", "Dokumentation", "Entwurf", "Konzept", "Protokoll", "Spezifikation", "Vorgabe", "Anderer Dokumenten-Typ eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Anforderung", "Architektur", "Beschreibung", "Diagramm", "Dokumentation", "Entwurf", "Konzept", "Protokoll", "Spezifikation", "Vorgabe", "anderer", "inexistent"],
+      "manualEntryNumber": 10,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 11,
+      "prompt": "Wähle ein Dokumenten-Typ",
+      "input": "Trage ein Dokument-Typ ein (verpflichtend)",
+      "printValue": "Notiz Typ"
+    }
+  },
+
+  "noteMetaDocTagPool": {
+    "active": true,
+    "noteMetaDocTag0": {
+      "active": true,
+      "label": ["Architektur", "Aufsicht", "Ausbildung", "Beteiligte", "Framework", "Governance", "Management", "Regulatorien", "Sicherheit", "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Architektur", "Aufsicht", "Ausbildung", "Beteiligte", "Framework", "Governance", "Management", "Regulatorien", "Sicherheit", "eintragen", "inexistent"],
+      "prompt": "Wähle eine Unterkategorie",
+      "input": "Trage eine Kategorie ein (verpflichtend)",
+      "manualEntryNumber": 9,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 10,
+      "second": {
+        "active": false,
+        "Dienst": {
+          "label": null,
+          "value": null,
+          "prompt": null,
+          "input": null,
+          "manualEntryNumber": null,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": null
+        }
+      }
+    }
+  },
+
+  "noteExpandPool": {
+    "active": true,
+    "tableFirstRowTitle": "Kategorie:",
+    "tableSecondRowTitle": "Wert:",
+    "noteExpand0": {
+      "active": true,
+      "label": ["Dokumentenbezeichnung eintragen", "Dokumentenbezeichnung unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zur Dokumentenbezeichnung",
+      "input": "Trage die Dokumentenbezeichnung ein (verpflichtend)",
+      "printValue": "Dokumentenbezeichnung"
+    },
+    "noteExpand1": {
+      "active": true,
+      "label": ["Verantwortliche Person eintragen", "Verantwortliche Person unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zur verantwortlichen Person",
+      "input": "Trage die verantwortliche Person ein (verpflichtend)",
+      "printValue": "Verantwortliche Person"
+    },
+    "noteExpand2": {
+      "active": true,
+      "label": ["Governance, Risiko und Compliance", "Software- und Produktmanagement", "Softwareentwicklung und -betrieb", "IT-Infrastruktur und Betrieb", "IT-Sicherheit und Datenschutz", "Datenmanagement und Analytics", "Architektur und Standards", "Personal und Organisation", "Finanzen und Beschaffung", "Rechtliche und ethische Aspekte", "Diverse Gültigkeitsbereiche", "Anderer Gültigkeitsbereich eintragen", "Gültigkeitsbereich unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["Governance, Risiko und Compliance", "Software- und Produktmanagement", "Softwareentwicklung und -betrieb", "IT-Infrastruktur und Betrieb", "IT-Sicherheit und Datenschutz", "Datenmanagement und Analytics", "Architektur und Standards", "Personal und Organisation", "Finanzen und Beschaffung", "Rechtliche und ethische Aspekte", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 12,
+      "unknownEntryNumber": 13,
+      "nonExistEntryNumber": 14,
+      "prompt": "Wähle einen Eintrag zum Gültigkeitsbereich",
+      "input": "Trage einen Gültigkeitsbereich ein (verpflichtend)",
+      "printValue": "Gültigkeitsbereich"
+    },
+    "noteExpand3": {
+      "active": true,
+      "label": ["ISO/IEC 27018 (personenbezogene Daten in der Cloud)", "ISO/IEC 27001 (Informationssicherheitsmanagement)", "ISO/IEC 27002 (Sicherheitsleitlinien)", "ISO/IEC 27005 (Informationssicherheitsrisikomanagement)", "ISO/IEC 27006 (Anforderungen an Zertifizierungsstellen)", "ISO/IEC 27017 (Cloud-Sicherheit)", "ISO/IEC 27018 (Datenschutz in der Cloud)", "ISO/IEC 27034 (Application Security)", "ISO/IEC 27701 (Privacy Information Management)", "ISO/IEC 31000 (Risikomanagement)", "DSGVO / DSG (Datenschutz)", "IT-Grundschutz (BSI, Deutschland)", "NIST SP 800-53 (USA)", "NIST CSF (Cybersecurity Framework USA)", "COBIT (IT-Goverance und -Kontrollen)", "CSA CCM (Cloud Control Matrix)", "Diverse relevante Standards", "Relevanter Standard eintragen", "Relevanter Standard unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["ISO/IEC 27018","ISO/IEC 27001", "ISO/IEC 27002", "ISO/IEC 27005", "ISO/IEC 27006", "ISO/IEC 27017", "ISO/IEC 27018", "ISO/IEC 27034", "ISO/IEC 27701", "ISO/IEC 31000", "DSGVO / DSG", "IT-Grundschutz", "NIST SP 800-53", "NIST CSF", "COBIT", "CSA CCM", "diverse","eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 17,
+      "unknownEntryNumber": 18,
+      "nonExistEntryNumber": 19,
+      "prompt": "Wähle einen Eintrag zum relevanten Standard",
+      "input": "Trage den relevanten Standard ein (verpflichtend)",
+      "printValue": "Relevanter Standard"
+    },
+    "noteExpand4": {
+      "active": true,
+      "label": ["Sissach", "Diverse Standorte", "Anderer Standort eintragen", "Standort unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["Sissach", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 2,
+      "unknownEntryNumber": 3,
+      "nonExistEntryNumber": 4,
+      "prompt": "Wähle einen Eintrag Standort",
+      "input": "Trage den Standort ein (verpflichtend)",
+      "printValue": "Standort"
+    }
+  },
+
+  "sampleContentPool": {
+    "active": true,
+    "sampleContent0": {
+      "active": true,
+      "value": "Hier können ausführliche Notizinformationen eingetragen werden.\n\n"
+    },
+    "sampleContent1": {
+      "active": true,
+      "value": "### Kurze Einführung in Markdown\n\nDie wichtigsten Syntaxmerkmale von Mark-Down sind nachfolgend beschrieben.\n\n"
+    },
+    "sampleContent2": {
+      "active": true,
+      "value": " **Text Formatieren:**\n- Wörter zwischen `` `Backticks` `` werden `grau hinterlegt`,\n- Wörter zwischen `*Sternen*` werden *kursiv* dargestellt,\n- Wörter zwischen `**zwei Sternen**` werden **Fett** dargestellt und\n- Wörter zwischen `***drei Sternen***` werden ***Fett und Kursiv*** dargestellt.\n\n"
+    },
+    "sampleContent3": {
+      "active": true,
+      "value": "**Text als Zitat darstellen:**\n\n\tWird ein Freistehender Text mit 'TAB' eingerückt, so wird dieser Grau hinterlegt.\n\n> Wird einem freistehendem Text das Zeile 'grösser als' `>` vorangestellt,\n> so wird der Text als Zitat dargestellt.\n\n```Programmsprache\nwird Programmcode mit drei aufeinanderfolgenden Backticks ``` gekennzeichnet und wird direkt nach den Backticks die Programmsprache gesetzt, so wird der Programmcode farbig dargestellt.\n```\n\n"
+    },
+    "sampleContent4": {
+      "active": true,
+      "value": "**Text als Liste darstellen:**\n\n- Eine Liste wird durch das Voranstellen folgenden Zeichen `-` ,`+` , `*` erstellt.\n- [ ] Anklickbare Listen werden durch das Voranstellen folgender Zeichen `- [ ]` erstellt.\n1. Nummerierte Listenwerden durch das Voranstellen einer Nummern nachfolgendem Punkt '1.' dargestellt.\n\n"
+    },
+    "sampleContent5": {
+      "active": true,
+      "value": "**Externe Informationen hinzufügen**\n\nEin Bild wird mit dem Code `![Bild Alternativ Text](/pfad/zum/bild.png)` eingebunden. \nEin Externer Link wird mit dem Code `[Linkname](https://www.domain.name)` eingebunden.\nEin interner Link wird mit dem Code `[[mein Notizname]]` eingebunden. Der Selbe Link kann für virtuelle Links zur besseren Auffindbarkeit genutzt werden.\n\n"
+    },
+    "sampleContent6": {
+      "active": true,
+      "value": "**Tabellen einfügen:**\nFolgender Code erstellt eine Tabelle:\n```Markdown\n| Titel | einer | Tabelle |\n|---|---|---|\n| inhalt | inhalt | inhalt |\n```\n\n"
+    },
+    "sampleContent7": {
+      "active": true,
+      "value": "**Titel und Linien**\nund horizontale durchgehende Linien werden mit den Zeichen `---` oder `***` am Anfang einer Zeile erstellt.\n"
+    }
+  }
+}

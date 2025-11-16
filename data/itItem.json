@@ -1,0 +1,171 @@
+{
+  "docIconMap": {
+    "active": true,
+    "mark": "🖥️"
+  },
+
+  "internalReferencesMap": {
+    "active": true,
+    "noteMetaDoc": {
+      "active": true,
+      "select": [0]
+    },
+    "noteMetaDocTag": {
+      "active": true,
+      "select": [0]
+    },
+    "noteExpand": {
+      "active": true,
+      "select": [2, 4, 5]
+    }
+  },
+
+  "noteMetaDocPool": {
+    "active": true,
+    "noteMetaDoc0": {
+      "active": true,
+      "label": ["Anforderung", "Anleitung", "Beschreibung", "Dokumentation", "Inventar", "Konfiguration", "Konzept",  "Protokoll", "Spezifikation", "Vorgabe", "Anderer Dokumenten-Typ eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Anforderung", "Anleitung", "Beschreibung", "Dokumentation", "Inventar", "Konfiguration", "Konzept", "Protokoll", "Spezifikation", "Vorgabe", "anderer", "inexistent"],
+      "manualEntryNumber": 10,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 11,
+      "prompt": "Wähle ein Dokumenten-Typ",
+      "input": "Trage ein Dokument-Typ ein (verpflichtend)",
+      "printValue": "Notiz Typ"
+    }
+  },
+
+  "noteMetaDocTagPool": {
+    "active": true,
+    "noteMetaDocTag0": {
+      "active": true,
+      "label": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "eintragen", "inexistent"],
+      "prompt": "Wähle eine Unterkategorie",
+      "input": "Trage eine Kategorie ein (verpflichtend)",
+      "manualEntryNumber": 14,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 15,
+      "second": {
+        "active": false,
+        "Appliance": {
+          "label": null,
+          "value": null,
+          "prompt": null,
+          "input": null,
+          "manualEntryNumber": null,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": null
+        }
+      }
+    }
+  },
+
+  "noteExpandPool": {
+    "active": true,
+    "tableFirstRowTitle": "Kategorie:",
+    "tableSecondRowTitle": "Wert:",
+    "noteExpand0": {
+      "active": true,
+      "label": ["Equipment Name eintragen", "Equipment Name unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zum Equipmentnamen",
+      "input": "Trage den Equipmentname ein (verpflichtend)",
+      "printValue": "Equipmentname"
+    },
+    "noteExpand1": {
+      "active": true,
+      "label": ["Verantwortliche Person eintragen", "Verantwortliche Person unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zur verantwortlichen Person",
+      "input": "Trage die verantwortliche Person ein (verpflichtend)",
+      "printValue": "Verantwortliche Person"
+    },
+    "noteExpand2": {
+      "active": true,
+      "label": ["Android", "BSD", "IOS", "Linux", "MacOS", "Windows", "Diverse -Betriebssysteme", "Anderes Betriebssystem eintragen", "Betriebssystem unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["Android", "BSD", "IOS", "Linux", "MacOS", "Windows", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 7,
+      "unknownEntryNumber": 8,
+      "nonExistEntryNumber": 9,
+      "prompt": "Wähle einen Eintrag zum Betriebssystem",
+      "input": "Trage das Betriebssystem ein (verpflichtend)",
+      "printValue": "Betriebssystem"
+    },
+    "noteExpand3": {
+      "active": true,
+      "label": ["Betriebssystem Version eintragen", "Diverse Betriebssystem-Versionen", "Betriebssystem Version unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["eintragen", "diverse", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 2,
+      "nonExistEntryNumber": 3,
+      "prompt": "Wähle einen Eintrag zur Betriebssystem Version",
+      "input": "Trage die Betriebssystem-Version ein (verpflichtend)",
+      "printValue": "Betriebssystem Version"
+    },
+    "noteExpand4": {
+      "active": true,
+      "label": ["x86 - 64-Bit", "i386 - 32-Bit", "ARM - 64-Bit", "ARM - 32-Bit", "ESP32 - 32-Bit", "Diverse CPU-Architekturen", "Andere CPU-Architektur eintragen", "CPU-Architektur unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["x86 - 64-Bit", "i386 - 32-Bit", "ARM - 64-Bit", "ARM - 32-Bit", "ESP32 - 32-Bit", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 6,
+      "unknownEntryNumber": 7,
+      "nonExistEntryNumber": 8,
+      "prompt": "Wähle einen Eintrag zur CPU-Architektur",
+      "input": "Trage die CPU-Architektur ein (verpflichtend)",
+      "printValue": "CPU-Architektur"
+    },
+    "noteExpand5": {
+      "active": true,
+      "label": ["Bash-Script", "C", "C++", "C#", "CSS", "Dos-Script", "GO", "HTML", "Java", "JavaScript", "Perl", "PHP", "PowerShell", "Pyton", "Ruby", "Rust", "Swift", "TypeScript", "VBScript", "Windows Script Host", "Diverse Programmiersprachen","Andere Programmiersprache eintragen", "Programmiersprache unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value":["Bash-Script", "C", "C++", "C#", "CSS", "Dos-Script", "GO", "HTML", "Java", "JavaScript", "Perl", "PHP", "PowerShell", "Pyton", "Ruby", "Rust", "Swift", "TypeScript", "VBScript", "Windows Script Host", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 21,
+      "unknownEntryNumber": 22,
+      "nonExistEntryNumber": 23,
+      "prompt": "Wähle einen Eintrag zur Programmiersprache",
+      "input": "Trage die Programmiersprache ein (verpflichtend)",
+      "printValue": "Programmiersprache"
+    }
+  },
+
+  "sampleContentPool": {
+    "active": true,
+    "sampleContent0": {
+      "active": true,
+      "value": "Hier können ausführliche Notizinformationen eingetragen werden.\n\n"
+    },
+    "sampleContent1": {
+      "active": true,
+      "value": "### Kurze Einführung in Markdown\n\nDie wichtigsten Syntaxmerkmale von Mark-Down sind nachfolgend beschrieben.\n\n"
+    },
+    "sampleContent2": {
+      "active": true,
+      "value": " **Text Formatieren:**\n- Wörter zwischen `` `Backticks` `` werden `grau hinterlegt`,\n- Wörter zwischen `*Sternen*` werden *kursiv* dargestellt,\n- Wörter zwischen `**zwei Sternen**` werden **Fett** dargestellt und\n- Wörter zwischen `***drei Sternen***` werden ***Fett und Kursiv*** dargestellt.\n\n"
+    },
+    "sampleContent3": {
+      "active": true,
+      "value": "**Text als Zitat darstellen:**\n\n\tWird ein Freistehender Text mit 'TAB' eingerückt, so wird dieser Grau hinterlegt.\n\n> Wird einem freistehendem Text das Zeile 'grösser als' `>` vorangestellt,\n> so wird der Text als Zitat dargestellt.\n\n```Programmsprache\nwird Programmcode mit drei aufeinanderfolgenden Backticks ``` gekennzeichnet und wird direkt nach den Backticks die Programmsprache gesetzt, so wird der Programmcode farbig dargestellt.\n```\n\n"
+    },
+    "sampleContent4": {
+      "active": true,
+      "value": "**Text als Liste darstellen:**\n\n- Eine Liste wird durch das Voranstellen folgenden Zeichen `-` ,`+` , `*` erstellt.\n- [ ] Anklickbare Listen werden durch das Voranstellen folgender Zeichen `- [ ]` erstellt.\n1. Nummerierte Listenwerden durch das Voranstellen einer Nummern nachfolgendem Punkt '1.' dargestellt.\n\n"
+    },
+    "sampleContent5": {
+      "active": true,
+      "value": "**Externe Informationen hinzufügen**\n\nEin Bild wird mit dem Code `![Bild Alternativ Text](/pfad/zum/bild.png)` eingebunden. \nEin Externer Link wird mit dem Code `[Linkname](https://www.domain.name)` eingebunden.\nEin interner Link wird mit dem Code `[[mein Notizname]]` eingebunden. Der Selbe Link kann für virtuelle Links zur besseren Auffindbarkeit genutzt werden.\n\n"
+    },
+    "sampleContent6": {
+      "active": true,
+      "value": "**Tabellen einfügen:**\nFolgender Code erstellt eine Tabelle:\n```Markdown\n| Titel | einer | Tabelle |\n|---|---|---|\n| inhalt | inhalt | inhalt |\n```\n\n"
+    },
+    "sampleContent7": {
+      "active": true,
+      "value": "**Titel und Linien**\nund horizontale durchgehende Linien werden mit den Zeichen `---` oder `***` am Anfang einer Zeile erstellt.\n"
+    }
+  }
+}
