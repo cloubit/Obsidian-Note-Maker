@@ -93,15 +93,17 @@
   },
 
   "noteMainRangePool": {
-    "label": ["Dienst", "Entwicklung", "Equipment", "Software", "IT-Umfeld"],
-    "value": ["Service", "Development", "Item", "Software", "Environment"],
+    "label": ["Dienst", "Entwicklung", "Equipment", "Software", "IT-Umfeld", "Medien", "Person"],
+    "value": ["Service", "Development", "Item", "Software", "Environment", "Medien", "Person"],
     "prompt": "Wähle die benötigte Notiz Kategorie",
     "selection": {
       "Service": {"noteMainRangeValue": "/data/itServices.json"},
       "Development": {"noteMainRangeValue": "/data/itDevelopment.json"},
       "Item": {"noteMainRangeValue": "/data/itItem.json"},
       "Software": {"noteMainRangeValue": "/data/itSoftwares.json"},
-      "Environment": {"noteMainRangeValue": "/data/itEnvironment.json"}
+      "Environment": {"noteMainRangeValue": "/data/itEnvironment.json"},
+      "Medien": {"noteMainRangeValue": "/data/media.json"},
+      "Person": {"noteMainRangeValue": "/data/person.json"}
     }
   },
 
