@@ -191,35 +191,39 @@
     "active": true,
     "sampleContent0": {
       "active": true,
-      "value": "%%Hier können ausführliche Notizinformationen eingetragen werden. Einige Beispiele folgen.%%\n\n"
+      "value": "%%Hier können ausführliche Informationen zur Person eingetragen werden. Nachfolgend einige Hinweise zum möglichen Inhalt.%%\n\n"
     },
     "sampleContent1": {
       "active": true,
-      "value": "### Grunddaten\n\n%% Wichtige Daten die nicht in den erweiterten Daten erfasst sind.%%\n\n"
+      "value": "%%**Grunddaten zur Person**%%\n%%Wichtige Daten zur Person, die nicht in den erweiterten Daten erfasst sind.%%\n\n"
     },
     "sampleContent2": {
       "active": true,
-      "value": " **Beruflicher Hintergrund:**\n%%Beruflicher Hintergrund beschreibt Themen wie:%%\n - berufliche Laufbahn, Fachkompetenzen, berufliche Spezialgebiete, Führungserfahrung, Projekte und Initiativen, Branchenkenntnisse und berufliche Netzwerke.%%\n\n"
+      "value": "%%**Beruflicher Hintergrund:**%%\n%%Beruflicher Hintergrund behandelt Themen wie:%%\n%%*Berufliche Laufbahn, Fachkompetenzen, berufliche Spezialgebiete, Führungserfahrung, Projekte und Initiativen, Branchenkenntnisse und berufliche Netzwerke*%%\n\n"
     },
     "sampleContent3": {
       "active": true,
-      "value": "**Persönliche Merkmale:**\n\n%%Persönliche Merkmale beschreibt Themen wie:%%\n - Arbeitsstil, Motivation und Ziele sowie persönliche Werte und Überzeugungen.%%\n\n"
+      "value": "%%**Persönliche Merkmale:**%%\n%%Persönliche Merkmale behandelt Themen wie:%%\n%%*Arbeitsstil, Motivation und Ziele, persönliche Werte und Überzeugungen*%%\n\n"
     },
     "sampleContent4": {
       "active": true,
-      "value": "**Soft Skills und Kommunikation:**\n\n%%Soft Skills und Kommunikation beschreibt Themen wie:%%\n - Teamfähigkeit, Moderationsfähigkeiten, Konfliktlösung, Frendsprachen, Präsentations- und Handlungsgeschick sowie Typische Kommunikationsformen.%%\n\n"
+      "value": "%%**Soft Skills und Kommunikation:**%%\n%%Soft Skills und Kommunikation behandelt Themen wie:%%\n%%*Teamfähigkeit, Moderationsfähigkeiten, Konfliktlösung, Fremdsprachen, Präsentations- und Handlungsgeschick, Typische Kommunikationsformen*%%\n\n"
     },
     "sampleContent5": {
       "active": true,
-      "value": "**Hobbys, Interessen und soziales Umfeld**\n\n%%Hobbys, Interessen und soziales Umfeld beschreibt Themen wie:%%\n - Freizeitaktivitäten, ehrenamtliches Engagement, Einfluss auf Berufsleben (Work-Life-Balance, Stressmanagement), relevante Netzwerke (Branchenverbände, Mentoring, Alumni).%%\n\n"
+      "value": "%%**Hobbys, Interessen und soziales Umfeld:**%%\n%%Hobbys, Interessen und soziales Umfeld behandelt Themen wie:%%\n%%*Freizeitaktivitäten, ehrenamtliches Engagement, Einfluss auf Berufsleben (Work-Life-Balance, Stressmanagement), relevante Netzwerke (Branchenverbände, Mentoring, Alumni)*%%\n\n"
     },
     "sampleContent6": {
       "active": true,
-      "value": "**Stärken, Schwächen und Entwicklung:**\n%%Stärken, Schwächen und Entwicklung beschreibt Themen wie:%%\n - Kerner Strengths (z.B. analytisch, strategisch denken), Entwicklungsbedarf, Lernziele, Lernmethoden und bevorzugte Weiterbildungsformen.%%\n\n"
+      "value": "%%**Stärken, Schwächen und Entwicklung:**%%\n%%Stärken, Schwächen und Entwicklung behandelt Themen wie:%%\n%%*Kerner Strengths (z.B. analytisch, strategisch denken), Entwicklungsbedarf, Lernziele, Lernmethoden und bevorzugte Weiterbildungsformen*%%\n\n"
     },
     "sampleContent7": {
       "active": true,
-      "value": "**Relevante Rahmenbedingungen**\n%%Relevante Rahmenbedingungen beschreibt Themen wie:%%\n %% - Standortwechselbereitsschaft, Vertragsformen, Reisetätigkeit.%%\n"
+      "value": "%%**Relevante Rahmenbedingungen:**%%\n%%Relevante Rahmenbedingungen behandelt Themen wie:%%\n%%*Standortwechselbereitschaft, Vertragsformen, Reisetätigkeit*%%\n\n"
+    },
+    "sampleContent8": {
+      "active": true,
+      "value": "%%**Hinweise zur Anwendung:**%%\n%%Passe Details an Kanal, Zielgruppe und Rechtsrahmen an. Prüfe Datenschutz und Quellenverifikation. Halte die Beschreibung konsistent, klar und objektiv.%%\n"
     }
   }
 }

@@ -148,35 +148,67 @@
     "active": true,
     "sampleContent0": {
       "active": true,
-      "value": "Hier können ausführliche Notizinformationen eingetragen werden.\n\n"
+      "value": "%%Hier können ausführliche Informationen zum Dienst bzw. Service eingetragen werden. Nachfolgend einige Hinweise zum möglichen Inhalt.%%\n\n"
     },
     "sampleContent1": {
       "active": true,
-      "value": "### Kurze Einführung in Markdown\n\nDie wichtigsten Syntaxmerkmale von Mark-Down sind nachfolgend beschrieben.\n\n"
+      "value": "%%**Allgemeine Serviceübersicht**%%\n%%Allgemeine Serviceübersicht behandelt Themen wie:%%\n%%*Produkt-/Servicename, Serviceklasse, Versionen, Gültigkeitszeitraum, Zweck, Nutzen, Hauptergebnisse für den Kunden, Zielgruppe(n) und Einsatzszenarien*%%\n\n"
     },
     "sampleContent2": {
       "active": true,
-      "value": " **Text Formatieren:**\n- Wörter zwischen `` `Backticks` `` werden `grau hinterlegt`,\n- Wörter zwischen `*Sternen*` werden *kursiv* dargestellt,\n- Wörter zwischen `**zwei Sternen**` werden **Fett** dargestellt und\n- Wörter zwischen `***drei Sternen***` werden ***Fett und Kursiv*** dargestellt.\n\n"
+      "value": "%%**Leistungsumfang (In-Scope):**%%\n%%Leistungsumfang (In-Scope) behandelt Themen wie:%%\n%%*Hauptdienstleistungen und Funktionen, Servicemodelle (z. B. SaaS, managed service, Supportpakete), Abgedeckte Prozesse, Tabellen/Workflows, Abnahmekriterien*%%\n\n"
     },
     "sampleContent3": {
       "active": true,
-      "value": "**Text als Zitat darstellen:**\n\n\tWird ein Freistehender Text mit 'TAB' eingerückt, so wird dieser Grau hinterlegt.\n\n> Wird einem freistehendem Text das Zeile 'grösser als' `>` vorangestellt,\n> so wird der Text als Zitat dargestellt.\n\n```Programmsprache\nwird Programmcode mit drei aufeinanderfolgenden Backticks ``` gekennzeichnet und wird direkt nach den Backticks die Programmsprache gesetzt, so wird der Programmcode farbig dargestellt.\n```\n\n"
+      "value": "%%**Nicht-funktionale Anforderungen:**%%\n%%Nicht-funktionale Anforderungen behandelt Themen wie:%%\n%%*Verfügbarkeit/Service-Level-Agreement (SLA) inkl. Uptimes, Reaktionszeiten, Leistungsparameter, Skalierbarkeit, Zuverlässigkeit, Wartbarkeit, Disaster Recovery, Sicherheit, Datenschutz, Compliance*%%\n\n"
     },
     "sampleContent4": {
       "active": true,
-      "value": "**Text als Liste darstellen:**\n\n- Eine Liste wird durch das Voranstellen folgenden Zeichen `-` ,`+` , `*` erstellt.\n- [ ] Anklickbare Listen werden durch das Voranstellen folgender Zeichen `- [ ]` erstellt.\n1. Nummerierte Listenwerden durch das Voranstellen einer Nummern nachfolgendem Punkt '1.' dargestellt.\n\n"
+      "value": "%%**Verfügbarkeit und Betrieb:**%%\n%%Verfügbarkeit und Betrieb behandelt Themen wie:%%\n%%*Betriebszeiten, geplante Wartungsfenster, Standorte/Rechenzentren, Ausfall- und Notfallpläne, Monitoring, Incident-Management, Eskalationswege*%%\n\n"
     },
     "sampleContent5": {
       "active": true,
-      "value": "**Externe Informationen hinzufügen**\n\nEin Bild wird mit dem Code `![Bild Alternativ Text](/pfad/zum/bild.png)` eingebunden. \nEin Externer Link wird mit dem Code `[Linkname](https://www.domain.name)` eingebunden.\nEin interner Link wird mit dem Code `[[mein Notizname]]` eingebunden. Der Selbe Link kann für virtuelle Links zur besseren Auffindbarkeit genutzt werden.\n\n"
+      "value": "%%**Rollen, Verantwortlichkeiten und Ansprechpartner:**%%\n%%Rollen, Verantwortlichkeiten und Ansprechpartner behandelt Themen wie:%%\n%%*Kunde, Anbieter, Ansprechpartner, Ansprechpartner_innen für Support, Third Parties, Verantwortlichkeiten (RACI: Responsible, Accountable, Consulted, Informed)*%%\n\n"
     },
     "sampleContent6": {
       "active": true,
-      "value": "**Tabellen einfügen:**\nFolgender Code erstellt eine Tabelle:\n```Markdown\n| Titel | einer | Tabelle |\n|---|---|---|\n| inhalt | inhalt | inhalt |\n```\n\n"
+      "value": "%%**Schnittstellen und Abhängigkeiten:**%%\n%%Schnittstellen und Abhängigkeiten behandelt Themen wie:%%\n%%*Integrationen, API-Verfügbarkeit, Datenformate, Authentifizierung, Abhängigkeiten zu Drittdiensten, Lieferanten, externen Systemen.*%%\n\n"
     },
     "sampleContent7": {
       "active": true,
-      "value": "**Titel und Linien**\nund horizontale durchgehende Linien werden mit den Zeichen `---` oder `***` am Anfang einer Zeile erstellt.\n"
+      "value": "%%**Daten und Sicherheit:**%%\n%%Daten und Sicherheit behandelt Themen wie:%%\n%%*Datenkategorien, Datenhoheit, Speicherort, Backup-Intervalle, Zugriffskontrollen, Identity & Access Management, Audit Logs, Datenschutz und rechtliche Vorgaben (Datenschutz-konformität, etc.)*%%\n\n"
+    },
+    "sampleContent8": {
+      "active": true,
+      "value": "%%**Nutzung, Onboarding und Migrationspfade:**%%\n%%Nutzung, Onboarding und Migrationspfade behandelt Themen wie:%%\n%%*Bereitstellung, Installation/Provisioning, Onboarding-Schritte, Migrationspfade von bestehenden Lösungen, Übergangsfristen*%%\n\n"
+    },
+    "sampleContent9": {
+      "active": true,
+      "value": "%%**Preise und Abrechnung:**%%\n%%Preise und Abrechnung behandelt Themen wie:%%\n%%*Preismodelle, Abrechnungszyklus, Zusatzkosten, Lizenzierung (falls relevant), Kündigungsfristen, SLA-basierte Garantien*%%\n\n"
+    },
+    "sampleContent10": {
+      "active": true,
+      "value": "%%**Qualitätssicherung und Compliance:**%%\n%%Qualitätssicherung und Compliance behandelt Themen wie:%%\n%%*Qualitätsstandards, Prüf- und Freigabeverfahren, Sicherheits- und Datenschutzprüfungen, Audit-Berichte*%%\n\n"
+    },
+    "sampleContent11": {
+      "active": true,
+      "value": "%%**Support und Service-Delivery:**%%\n%%Support und Service-Delivery behandelt Themen wie:%%\n%%*Support-Level, Reaktions- und Wiederherstellungszeiten, Self-Service-Möglichkeiten, Wissensdatenbank, Schulungen, Service-Reviews, Reporting, Kennzahlen*%%\n\n"
+    },
+    "sampleContent12": {
+      "active": true,
+      "value": "%%**Datenschutz, Rechtliches und Compliance:**%%\n%%Datenschutz, Rechtliches und Compliance behandelt Themen wie:%%\n%%*Nutzungsbedingungen, geistiges Eigentum, Urheberrechte, Haftungsausschlüsse, Datenschutzdokumente, Datenschutzvereinbarungen*%%\n\n"
+    },
+    "sampleContent13": {
+      "active": true,
+      "value": "%%**Metriken und Berichte:**%%\n%%Metriken und Berichte behandelt Themen wie:%%\n%%*Kennzahlen (Verfügbarkeit, Ausfallzeiten, MTTR, Nutzung), Berichtsfrequenz und -format*%%\n\n"
+    },
+    "sampleContent14": {
+      "active": true,
+      "value": "%%**Änderungsmanagement:**%%\n%%Änderungsmanagement behandelt Themen wie:%%\n%%*Prozess für Upgrades, Patches, Deprecations, Kommunikationsplan für Änderungen*%%\n\n"
+    },
+    "sampleContent15": {
+      "active": true,
+      "value": "%%**Hinweise zur Anwendung:**%%\n%%Passe Details an Kanal, Zielgruppe und Rechtsrahmen an. Prüfe Datenschutz und Quellenverifikation. Halte die Beschreibung konsistent, klar und objektiv.%%\n"
     }
   }
 }

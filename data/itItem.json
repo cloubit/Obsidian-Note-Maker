@@ -137,35 +137,67 @@
     "active": true,
     "sampleContent0": {
       "active": true,
-      "value": "Hier können ausführliche Notizinformationen eingetragen werden.\n\n"
+      "value": "%%Hier können ausführliche Informationen zum Equipment eingetragen werden. Nachfolgend einige Hinweise zum möglichen Inhalt.%%\n\n"
     },
     "sampleContent1": {
       "active": true,
-      "value": "### Kurze Einführung in Markdown\n\nDie wichtigsten Syntaxmerkmale von Mark-Down sind nachfolgend beschrieben.\n\n"
+      "value": "%%**Allgemeine Daten zum Equipment**%%\n%%Allgemeine Daten zum Equipment behandelt Themen wie:%%\n%%*Name/Bezeichnung, eindeutige ID, Version, Status (Entwurf, Freigegeben), Kategorie/Typ, Zugehörige Produktgruppe oder Modul, Gültigkeits- bzw. Verfügbarkeit Zeitraum*%%\n\n"
     },
     "sampleContent2": {
       "active": true,
-      "value": " **Text Formatieren:**\n- Wörter zwischen `` `Backticks` `` werden `grau hinterlegt`,\n- Wörter zwischen `*Sternen*` werden *kursiv* dargestellt,\n- Wörter zwischen `**zwei Sternen**` werden **Fett** dargestellt und\n- Wörter zwischen `***drei Sternen***` werden ***Fett und Kursiv*** dargestellt.\n\n"
+      "value": "%%**Zweck und Nutzen:**%%\n%%Zweck und Nutzen behandelt Themen wie:%%\n%%*Kurzbeschreibung des Zwecks, Hauptnutzer und Anwendungsfall(n), Nutzen, Vorteile, Abnahme- oder Erfolgskriterien*%%\n\n"
     },
     "sampleContent3": {
       "active": true,
-      "value": "**Text als Zitat darstellen:**\n\n\tWird ein Freistehender Text mit 'TAB' eingerückt, so wird dieser Grau hinterlegt.\n\n> Wird einem freistehendem Text das Zeile 'grösser als' `>` vorangestellt,\n> so wird der Text als Zitat dargestellt.\n\n```Programmsprache\nwird Programmcode mit drei aufeinanderfolgenden Backticks ``` gekennzeichnet und wird direkt nach den Backticks die Programmsprache gesetzt, so wird der Programmcode farbig dargestellt.\n```\n\n"
+      "value": "%%**Funktionsumfang:**%%\n%%Funktionsumfang behandelt Themen wie:%%\n%%*Hauptfunktionen und Teilfunktionen (aufgelistet), Arbeitsabläufe/User Journeys, Eingaben, Verarbeitung, Ausgaben*%%\n\n"
     },
     "sampleContent4": {
       "active": true,
-      "value": "**Text als Liste darstellen:**\n\n- Eine Liste wird durch das Voranstellen folgenden Zeichen `-` ,`+` , `*` erstellt.\n- [ ] Anklickbare Listen werden durch das Voranstellen folgender Zeichen `- [ ]` erstellt.\n1. Nummerierte Listenwerden durch das Voranstellen einer Nummern nachfolgendem Punkt '1.' dargestellt.\n\n"
+      "value": "%%**Nicht-funktionale Anforderungen:**%%\n%%Nicht-funktionale Anforderungen behandelt Themen wie:%%\n%%*Leistung, Reaktionszeit, Skalierbarkeit, Zuverlässigkeit, Verfügbarkeit, Backup/Wiederherstellung, Sicherheit, Zugriffskontrollen, Datenschutz*%%\n\n"
     },
     "sampleContent5": {
       "active": true,
-      "value": "**Externe Informationen hinzufügen**\n\nEin Bild wird mit dem Code `![Bild Alternativ Text](/pfad/zum/bild.png)` eingebunden. \nEin Externer Link wird mit dem Code `[Linkname](https://www.domain.name)` eingebunden.\nEin interner Link wird mit dem Code `[[mein Notizname]]` eingebunden. Der Selbe Link kann für virtuelle Links zur besseren Auffindbarkeit genutzt werden.\n\n"
+      "value": "%%**Abhängigkeiten und Schnittstellen:**%%\n%%Abhängigkeiten und Schnittstellen behandelt Themen wie:%%\n%%*Technische Abhängigkeiten, Plattformen, Systeme, APIs, Integrationen, Datenformate, Authentifizierung, Externe Lieferanten oder Dienste*%%\n\n"
     },
     "sampleContent6": {
       "active": true,
-      "value": "**Tabellen einfügen:**\nFolgender Code erstellt eine Tabelle:\n```Markdown\n| Titel | einer | Tabelle |\n|---|---|---|\n| inhalt | inhalt | inhalt |\n```\n\n"
+      "value": "%%**Daten und Informationen:**%%\n%%Daten und Informationen behandelt Themen wie:%%\n%%*Datenarten/Kategorien, Schlüsselentitäten, Beziehungen, Speicherort, Datenhoheit, Datenschutzanforderungen, Datenfluss-Diagramm oder grobe Datenmodell-Übersicht (falls relevant)*%%\n\n"
     },
     "sampleContent7": {
       "active": true,
-      "value": "**Titel und Linien**\nund horizontale durchgehende Linien werden mit den Zeichen `---` oder `***` am Anfang einer Zeile erstellt.\n"
+      "value": "%%**Benutzeroberfläche und UX (falls relevant):**%%\n%%Benutzeroberfläche und UX (falls relevant) behandelt Themen wie:%%\n%%*Screenshots oder Mockups, Terminologie, Barrierefreiheit, Konfigurierbare Einstellungen, Personalisierung*%%\n\n"
+    },
+    "sampleContent8": {
+      "active": true,
+      "value": "%%**Betrieb und Wartung:**%%\n%%Betrieb und Wartung behandelt Themen wie:%%\n%%*Installations-/Bereitstellungsanleitung (falls fysieke Komponente), Wartungsfenster, Updates, Migrationen, Logging, Monitoring, Fehlermanagement*%%\n\n"
+    },
+    "sampleContent9": {
+      "active": true,
+      "value": "%%**Sicherheit und Compliance:**%%\n%%Sicherheit und Compliance behandelt Themen wie:%%\n%%*Authentifizierung/Autorisierung, Audit Logs, Datenschutz, DSGVO-Konformität, Compliance-Anforderungen*%%\n\n"
+    },
+    "sampleContent10": {
+      "active": true,
+      "value": "%%**Migration und Umstieg:**%%\n%%Migration und Umstieg behandelt Themen wie:%%\n%%*Migrationspfade, Import/Export-Funktionen, Deprecations-Plan für veraltete Funktionen*%%\n\n"
+    },
+    "sampleContent11": {
+      "active": true,
+      "value": "%%**Qualität, Tests und Nachweise:**%%\n%%Qualität, Tests und Nachweise behandelt Themen wie:%%\n%%*Qualitätskriterien, Testabdeckung, Akzeptanzkriterien, Zertifikate, Audits, Compliance-Nachweise*%%\n\n"
+    },
+    "sampleContent12": {
+      "active": true,
+      "value": "%%**Preise, Lizenzierung und Verfügbarkeit:**%%\n%%Preise, Lizenzierung und Verfügbarkeit behandelt Themen wie:%%\n%%*Verfügbarkeit, SLA-relevante Informationen (falls zutreffend)*%%\n\n"
+    },
+    "sampleContent13": {
+      "active": true,
+      "value": "%%**Dokumentation und Support:**%%\n%%Dokumentation und Support behandelt Themen wie:%%\n%%*API-/Entwicklerdokumentation, Benutzerdokumentation, Support-Optionen, Kontaktwege, SLA-Informationen*%%\n\n"
+    },
+    "sampleContent14": {
+      "active": true,
+      "value": "%%**Metriken und Kennzahlen:**%%\n%%Metriken und Kennzahlen behandelt Themen wie:%%\n%%*Relevante Messgrößen (Nutzungszahlen, Fehlerquote), Berichts- bzw. Veröffentlichungsfrequenz*%%\n\n"
+    },
+    "sampleContent15": {
+      "active": true,
+      "value": "%%**Hinweise zur Anwendung:**%%\n%%Passe Details an Kanal, Zielgruppe und Rechtsrahmen an. Prüfe Datenschutz und Quellenverifikation. Halte die Beschreibung konsistent, klar und objektiv.%%\n"
     }
   }
 }

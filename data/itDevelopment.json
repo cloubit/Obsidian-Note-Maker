@@ -148,35 +148,55 @@
     "active": true,
     "sampleContent0": {
       "active": true,
-      "value": "Hier können ausführliche Notizinformationen eingetragen werden.\n\n"
+      "value": "%%Hier können ausführliche Informationen zur Entwicklung eingetragen werden. Nachfolgend einige Hinweise zum möglichen Inhalt.%%\n\n"
     },
     "sampleContent1": {
       "active": true,
-      "value": "### Kurze Einführung in Markdown\n\nDie wichtigsten Syntaxmerkmale von Mark-Down sind nachfolgend beschrieben.\n\n"
+      "value": "%%**Allgemeine Informationen:**%%\n%%Allgemeine Informationen behandelt Themen wie:%%\n%%*Projekt- und Modulbezeichnung, eindeutige IDs, Zweck und Zielsetzung der Entwicklung (Features, Epics), Zugehörige Produkt-/Servicelandschaft, Versionierung*%%\n\n"
     },
     "sampleContent2": {
       "active": true,
-      "value": " **Text Formatieren:**\n- Wörter zwischen `` `Backticks` `` werden `grau hinterlegt`,\n- Wörter zwischen `*Sternen*` werden *kursiv* dargestellt,\n- Wörter zwischen `**zwei Sternen**` werden **Fett** dargestellt und\n- Wörter zwischen `***drei Sternen***` werden ***Fett und Kursiv*** dargestellt.\n\n"
+      "value": "%%**Architektur und Design:**%%\n%%Architektur und Design behandelt Themen wie:%%\n%%*Architektur-Überblick (Komponenten, Microservices, Modules), Schnittstellen und Datenflüsse (APIs, Events, Formate), Technologie-Stack (Programmiersprachen, Frameworks, Libraries)*%%\n\n"
     },
     "sampleContent3": {
       "active": true,
-      "value": "**Text als Zitat darstellen:**\n\n\tWird ein Freistehender Text mit 'TAB' eingerückt, so wird dieser Grau hinterlegt.\n\n> Wird einem freistehendem Text das Zeile 'grösser als' `>` vorangestellt,\n> so wird der Text als Zitat dargestellt.\n\n```Programmsprache\nwird Programmcode mit drei aufeinanderfolgenden Backticks ``` gekennzeichnet und wird direkt nach den Backticks die Programmsprache gesetzt, so wird der Programmcode farbig dargestellt.\n```\n\n"
+      "value": "%%**Entwicklung und Codebasis:**%%\n%%Entwicklung und Codebasis behandelt Themen wie:%%\n%%*Repository-Struktur, Branching-Strategie, Build- und Release-Prozesse (CI/CD, Pipelines), Coding-Standards, Naming-Conventions, Style-Guides, Abhängigkeiten, Pins/Lock-Dateien, Versionsmanagement*%%\n\n"
     },
     "sampleContent4": {
       "active": true,
-      "value": "**Text als Liste darstellen:**\n\n- Eine Liste wird durch das Voranstellen folgenden Zeichen `-` ,`+` , `*` erstellt.\n- [ ] Anklickbare Listen werden durch das Voranstellen folgender Zeichen `- [ ]` erstellt.\n1. Nummerierte Listenwerden durch das Voranstellen einer Nummern nachfolgendem Punkt '1.' dargestellt.\n\n"
+      "value": "%%**Datenhaltung:**%%\n%%Datenhaltung behandelt Themen wie:%%\n%%*Datenmodelle, Schemas, Migrationspläne, Testdaten-Strategie, Anonymisierung, Backups, Restore-Szenarien (falls relevant)*%%\n\n"
     },
     "sampleContent5": {
       "active": true,
-      "value": "**Externe Informationen hinzufügen**\n\nEin Bild wird mit dem Code `![Bild Alternativ Text](/pfad/zum/bild.png)` eingebunden. \nEin Externer Link wird mit dem Code `[Linkname](https://www.domain.name)` eingebunden.\nEin interner Link wird mit dem Code `[[mein Notizname]]` eingebunden. Der Selbe Link kann für virtuelle Links zur besseren Auffindbarkeit genutzt werden.\n\n"
+      "value": "%%**Sicherheit und Compliance:**%%\n%%Sicherheit und Compliance behandelt Themen wie:%%\n%%*Authentifizierung/Autorisierung (OAuth, RBAC), Secrets-Management, Secrets-rotation, Sicherheitsprüfungen (SAST/DAST), DSGVO- oder branchenspezifische Vorgaben*%%\n\n"
     },
     "sampleContent6": {
       "active": true,
-      "value": "**Tabellen einfügen:**\nFolgender Code erstellt eine Tabelle:\n```Markdown\n| Titel | einer | Tabelle |\n|---|---|---|\n| inhalt | inhalt | inhalt |\n```\n\n"
+      "value": "%%**Tests und Qualitätssicherung:**%%\n%%Tests und Qualitätssicherung behandelt Themen wie:%%\n%%*Testarten (Unit, Integration, End-to-End), Abdeckungsziele, Testumgebungen, Mocking/Stubs, Build-Status, Zertifikate, Qualitätskennzahlen (Code Coverage, Linters)*%%\n\n"
     },
     "sampleContent7": {
       "active": true,
-      "value": "**Titel und Linien**\nund horizontale durchgehende Linien werden mit den Zeichen `---` oder `***` am Anfang einer Zeile erstellt.\n"
+      "value": "%%**Deployment und Betrieb:**%%\n%%Deployment und Betrieb behandelt Themen wie:%%\n%%*Umgebungen (Dev, QA, Staging, Produktion) und Zugriffsregeln, Infrastruktur-als-Code (IaC), Provisioning- und Rollout-Strategien, Monitoring, Logging, Metriken, SLOs/SLA-bezogene Ziele, Wartungsfenster, Release- und Patch-Planung*%%\n\n"
+    },
+    "sampleContent8": {
+      "active": true,
+      "value": "%%**Abhängigkeiten und Schnittstellen:**%%\n%%Abhängigkeiten und Schnittstellen behandelt Themen wie:%%\n%%*Externe Services, Partner-APIs, Verträge/SLAs, Datenformate, Versionsständen, Mappings*%%\n\n"
+    },
+    "sampleContent9": {
+      "active": true,
+      "value": "%%**Sicherheit von Entwicklung und Betrieb:**%%\n%%Sicherheit von Entwicklung und Betrieb behandelt Themen wie:%%\n%%*Zugriffskontrollen, Rollen, Audit-Logs, Patch- und Vulnerability-Management*%%\n\n"
+    },
+    "sampleContent10": {
+      "active": true,
+      "value": "%%**Rollen, Verantwortlichkeiten und Dokumentation:**%%\n%%Rollen, Verantwortlichkeiten und Dokumentation behandelt Themen wie:%%\n%%*Entwickler, QA, DevOps, Support-Kontakte,  Eskalationspfade, Kommunikationskanäle*%%\n\n"
+    },
+    "sampleContent11": {
+      "active": true,
+      "value": "%%**Metriken und Berichte:**%%\n%%Metriken und Berichte behandelt Themen wie:%%\n%%*Entwicklungsfortschritt, Velocity, Burndown, Build- und Test-Statistiken, Deploy-Frequenz*%%\n\n"
+    },
+    "sampleContent12": {
+      "active": true,
+      "value": "%%**Hinweise zur Anwendung:**%%\n%%Passe Details an Kanal, Zielgruppe und Rechtsrahmen an. Prüfe Datenschutz und Quellenverifikation. Halte die Beschreibung konsistent, klar und objektiv.%%\n"
     }
   }
 }

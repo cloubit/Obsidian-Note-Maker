@@ -193,35 +193,55 @@
     "active": true,
     "sampleContent0": {
       "active": true,
-      "value": "Hier können ausführliche Notizinformationen eingetragen werden.\n\n"
+      "value": "%%Hier können ausführliche Informationen zum Medium eingetragen werden. Nachfolgend einige Hinweise zum möglichen Inhalt.%%\n\n"
     },
     "sampleContent1": {
       "active": true,
-      "value": "### Kurze Einführung in Markdown\n\nDie wichtigsten Syntaxmerkmale von Mark-Down sind nachfolgend beschrieben.\n\n"
+      "value": "%%**Grunddaten zum Medium**%%\n%%Grunddaten zum Medium behandelt Themen wie:%%\n%%Grunddaten zum Medium, die nicht in den erweiterten Daten erfasst sind.%%*\n\n"
     },
     "sampleContent2": {
       "active": true,
-      "value": " **Text Formatieren:**\n- Wörter zwischen `` `Backticks` `` werden `grau hinterlegt`,\n- Wörter zwischen `*Sternen*` werden *kursiv* dargestellt,\n- Wörter zwischen `**zwei Sternen**` werden **Fett** dargestellt und\n- Wörter zwischen `***drei Sternen***` werden ***Fett und Kursiv*** dargestellt.\n\n"
+      "value": "%%**Ziel und Kontext:**%%\n%%Ziel und Kontext behandelt Themen wie:%%\n%%*Zweck des Mediums, Zielgruppen, sowie Tonalität und Stilvorgaben (formell, sachlich, aufmerksam, humorvoll)*%%\n\n"
     },
     "sampleContent3": {
       "active": true,
-      "value": "**Text als Zitat darstellen:**\n\n\tWird ein Freistehender Text mit 'TAB' eingerückt, so wird dieser Grau hinterlegt.\n\n> Wird einem freistehendem Text das Zeile 'grösser als' `>` vorangestellt,\n> so wird der Text als Zitat dargestellt.\n\n```Programmsprache\nwird Programmcode mit drei aufeinanderfolgenden Backticks ``` gekennzeichnet und wird direkt nach den Backticks die Programmsprache gesetzt, so wird der Programmcode farbig dargestellt.\n```\n\n"
+      "value": "%%**Inhaltliche Schwerpunkte:**%%\n%%Inhaltliche Schwerpunkte behandelt Themen wie:%%\n%%*Kernaussagen/These, Hintergrundinformationen, Kontext, Relevantz, Wichtige Zitate und Quellen, sowie Gegenargumente und alternative Perspektiven*%%\n\n"
     },
     "sampleContent4": {
       "active": true,
-      "value": "**Text als Liste darstellen:**\n\n- Eine Liste wird durch das Voranstellen folgenden Zeichen `-` ,`+` , `*` erstellt.\n- [ ] Anklickbare Listen werden durch das Voranstellen folgender Zeichen `- [ ]` erstellt.\n1. Nummerierte Listenwerden durch das Voranstellen einer Nummern nachfolgendem Punkt '1.' dargestellt.\n\n"
+      "value": "%%**Struktur und Aufbau:**%%\n%%Struktur und Aufbau behandelt Themen wie:%%\n%%*Gliederung, Überschriften, Abstract/Summary sowie, Reihenfolge der Abschnitte (Einleitung, Hintergrund, Details, Auswirkungen)*%%\n\n"
     },
     "sampleContent5": {
       "active": true,
-      "value": "**Externe Informationen hinzufügen**\n\nEin Bild wird mit dem Code `![Bild Alternativ Text](/pfad/zum/bild.png)` eingebunden. \nEin Externer Link wird mit dem Code `[Linkname](https://www.domain.name)` eingebunden.\nEin interner Link wird mit dem Code `[[mein Notizname]]` eingebunden. Der Selbe Link kann für virtuelle Links zur besseren Auffindbarkeit genutzt werden.\n\n"
+      "value": "%%**Protagonisten und Beteiligte:**%%\n%%Protagonisten und Beteiligte behandelt Themen wie:%%\n%%*Personen, Organisationen, Rollen, Relevante Qualifikationen, Erfahrungen, Standpunkte, sowie Vertraulichkeits- und Einwilligungsstatus*%%\n\n"
     },
     "sampleContent6": {
       "active": true,
-      "value": "**Tabellen einfügen:**\nFolgender Code erstellt eine Tabelle:\n```Markdown\n| Titel | einer | Tabelle |\n|---|---|---|\n| inhalt | inhalt | inhalt |\n```\n\n"
+      "value": "%%**Daten und Fakten:**%%\n%%Daten und Fakten behandelt Themen wie:%%\n%%*Zahlen, Statistiken, Zeitrahmen, Quellenangaben, Verifizierungsnachweise, Grafiken, Tabellen, sowie Diagramme (Format, Beschriftungen)*%%\n\n"
     },
     "sampleContent7": {
       "active": true,
-      "value": "**Titel und Linien**\nund horizontale durchgehende Linien werden mit den Zeichen `---` oder `***` am Anfang einer Zeile erstellt.\n"
+      "value": "%%**Rechte und Ethik:**%%\n%%Rechte und Ethik behandelt Themen wie:%%\n%%*Urheberrechte, Nutzungsbedingungen, Einwilligungen, Datenschutz (insbesondere bei personenbezogenen Daten), sowie Umgang mit sensiblen Informationen*%%\n\n"
+    },
+    "sampleContent8": {
+      "active": true,
+      "value": "%%**Veröffentlichungsdetails:**%%\n%%Veröffentlichungsdetails behandelt Themen wie:%%\n%%*Veröffentlichungsdatum, Zeitfenster, Kanäle (Print, Online, Social, Presseverteiler), Timing-Strategie, sowie Cross-Promotion*%%\n\n"
+    },
+    "sampleContent9": {
+      "active": true,
+      "value": "%%**Ansprechpartner:**%%\n%%Ansprechpartner behandelt Themen wie:%%\n%%*Ansprechpartner:in für Rückfragen, Kontaktdaten, Pressesprecher/in, sowie Agenturen*%%\n\n"
+    },
+    "sampleContent10": {
+      "active": true,
+      "value": "%%**Formatspezifika:**%%\n%%Formatspezifika behandelt Themen wie:%%\n%%*Länge des Textes, Zitierweise, Stilhandbuch, Anforderungen an Logos, sowie Farbschemata und Layout*%%\n\n"
+    },
+    "sampleContent11": {
+      "active": true,
+      "value": "%%**Anhänge und Zusatzmaterial:**%%\n%%Anhänge und Zusatzmaterial behandelt Themen wie:%%\n%%*Hintergrunddokumente, Glossar, Chronologien, sowie Verknüpfungen zu relevanten Ressourcen*%%\n\n"
+    },
+    "sampleContent12": {
+      "active": true,
+      "value": "%%**Hinweise zur Anwendung:**%%\n%%Passe Details an Kanal, Zielgruppe und Rechtsrahmen an. Prüfe Datenschutz und Quellenverifikation. Halte die Beschreibung konsistent, klar und objektiv.%%\n"
     }
   }
 }
