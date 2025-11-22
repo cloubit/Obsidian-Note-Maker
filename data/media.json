@@ -113,7 +113,7 @@
     "noteExpand0": {
       "active": true,
       "label": ["Medientitel eintragen", "Medientitel unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -124,7 +124,7 @@
     "noteExpand1": {
       "active": true,
       "label": ["Autor/Creator eintragen", "Autor/Creator unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -135,7 +135,7 @@
     "noteExpand2": {
       "active": true,
       "label": ["Veröffentlichungsdatum eintragen", "Betriebssystem unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -146,7 +146,7 @@
     "noteExpand3": {
       "active": true,
       "label": ["Deutsch", "Englisch", "Französisch", "Italienisch", "Spanisch", "Diverse Sprachen", "Inhalts-Sprache eintragen", "Inhaltssprache unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Deutsch", "Englisch", "Französisch", "Italienisch", "Spanisch", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Deutsch", "Englisch", "Französisch", "Italienisch", "Spanisch", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 6,
       "unknownEntryNumber": 7,
       "nonExistEntryNumber": 8,
@@ -157,7 +157,7 @@
     "noteExpand4": {
       "active": true,
       "label": ["Genre/Kategorie eintragen", "Diverse Genre/Kategorien", "Genre/Kategorie unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "diverse", "unbekannt", "inexistent"],
+      "value": ["eintragen", "diverse", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 2,
       "nonExistEntryNumber": 3,
@@ -168,7 +168,7 @@
     "noteExpand5": {
       "active": true,
       "label": ["Herausgeber eintragen", "Diverse Herausgeber", "Herausgeber unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "diverse", "unbekannt", "inexistent"],
+      "value": ["eintragen", "diverse", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 2,
       "nonExistEntryNumber": 3,
@@ -179,7 +179,7 @@
     "noteExpand6": {
       "active": true,
       "label": ["Urheberrecht / Lizenz eintragen", "Diverse Urheberrechte / Lizenzen", "Urheberrecht / Lizenz unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "diverse", "unbekannt", "inexistent"],
+      "value": ["eintragen", "diverse", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 2,
       "nonExistEntryNumber": 3,

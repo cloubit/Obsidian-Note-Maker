@@ -93,17 +93,18 @@
   },
 
   "noteMainRangePool": {
-    "label": ["Dienst", "Entwicklung", "Equipment", "Software", "IT-Umfeld", "Medien", "Person"],
-    "value": ["Service", "Development", "Item", "Software", "Environment", "Medien", "Person"],
+    "label": ["Dienst", "Entwicklung", "Equipment", "IT-Umfeld", "Medien", "Person", "Sitzung", "Software"],
+    "value": ["Service", "Development", "Item", "Environment", "Medien", "Person", "Meeting", "Software"],
     "prompt": "Wähle die benötigte Notiz Kategorie",
     "selection": {
-      "Service": {"noteMainRangeValue": "/data/itServices.json"},
-      "Development": {"noteMainRangeValue": "/data/itDevelopment.json"},
-      "Item": {"noteMainRangeValue": "/data/itItem.json"},
-      "Software": {"noteMainRangeValue": "/data/itSoftwares.json"},
-      "Environment": {"noteMainRangeValue": "/data/itEnvironment.json"},
+      "Service": {"noteMainRangeValue": "/data/services.json"},
+      "Development": {"noteMainRangeValue": "/data/development.json"},
+      "Item": {"noteMainRangeValue": "/data/item.json"},
+      "Environment": {"noteMainRangeValue": "/data/environment.json"},
       "Medien": {"noteMainRangeValue": "/data/media.json"},
-      "Person": {"noteMainRangeValue": "/data/person.json"}
+      "Person": {"noteMainRangeValue": "/data/person.json"},
+      "Meeting": {"noteMainRangeValue": "/data/meeting.json"},
+      "Software": {"noteMainRangeValue": "/data/softwares.json"}
     }
   },
 

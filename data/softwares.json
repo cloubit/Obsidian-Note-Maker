@@ -104,7 +104,7 @@
     "noteExpand0": {
       "active": true,
       "label": ["Softwarename eintragen", "Softwarename unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -115,7 +115,7 @@
     "noteExpand1": {
       "active": true,
       "label": ["Verantwortliche Person eintragen", "Verantwortliche Person unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -126,7 +126,7 @@
     "noteExpand2": {
       "active": true,
       "label": ["Android", "BSD", "IOS", "Linux", "MacOS", "Windows", "Diverse -Betriebssysteme", "Anderes Betriebssystem eintragen", "Betriebssystem unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Android", "BSD", "IOS", "Linux", "MacOS", "Windows", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Android", "BSD", "IOS", "Linux", "MacOS", "Windows", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 7,
       "unknownEntryNumber": 8,
       "nonExistEntryNumber": 9,
@@ -137,7 +137,7 @@
     "noteExpand3": {
       "active": true,
       "label": ["Betriebssystem Version eintragen", "Diverse Betriebssystem-Versionen", "Betriebssystem Version unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "diverse", "unbekannt", "inexistent"],
+      "value": ["eintragen", "diverse", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 2,
       "nonExistEntryNumber": 3,
@@ -148,7 +148,7 @@
     "noteExpand4": {
       "active": true,
       "label": ["x86 - 64-Bit", "i386 - 32-Bit", "ARM - 64-Bit", "ARM - 32-Bit", "ESP32 - 32-Bit", "Diverse CPU-Architekturen", "Andere CPU-Architektur eintragen", "CPU-Architektur unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["x86 - 64-Bit", "i386 - 32-Bit", "ARM - 64-Bit", "ARM - 32-Bit", "ESP32 - 32-Bit", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["x86 - 64-Bit", "i386 - 32-Bit", "ARM - 64-Bit", "ARM - 32-Bit", "ESP32 - 32-Bit", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 6,
       "unknownEntryNumber": 7,
       "nonExistEntryNumber": 8,
@@ -159,7 +159,7 @@
     "noteExpand5": {
       "active": true,
       "label": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "Diverse System-Architekturen", "Andere System-Architekture eintragen", "System-Architekture unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 15,
       "unknownEntryNumber": 16,
       "nonExistEntryNumber": 17,
@@ -170,7 +170,7 @@
     "noteExpand6": {
       "active": true,
       "label": ["Bash-Script", "C", "C++", "C#", "CSS", "Dos-Script", "GO", "HTML", "Java", "JavaScript", "Perl", "PHP", "PowerShell", "Pyton", "Ruby", "Rust", "Swift", "TypeScript", "VBScript", "Windows Script Host", "Diverse Programmiersprachen","Andere Programmiersprache eintragen", "Programmiersprache unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Bash-Script", "C", "C++", "C#", "CSS", "Dos-Script", "GO", "HTML", "Java", "JavaScript", "Perl", "PHP", "PowerShell", "Pyton", "Ruby", "Rust", "Swift", "TypeScript", "VBScript", "Windows Script Host", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Bash-Script", "C", "C++", "C#", "CSS", "Dos-Script", "GO", "HTML", "Java", "JavaScript", "Perl", "PHP", "PowerShell", "Pyton", "Ruby", "Rust", "Swift", "TypeScript", "VBScript", "Windows Script Host", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 21,
       "unknownEntryNumber": 22,
       "nonExistEntryNumber": 23,

@@ -1,0 +1,220 @@
+{
+  "docIconMap": {
+    "active": true,
+    "mark": "🕵️‍♂️"
+  },
+
+  "internalReferencesMap": {
+    "active": true,
+    "noteMetaDoc": {
+      "active": true,
+      "select": [0]
+    },
+    "noteMetaDocTag": {
+      "active": true,
+      "select": [0]
+    },
+    "noteExpand": {
+      "active": true,
+      "select": [3, 4]
+    }
+  },
+
+  "noteMetaDocPool": {
+    "active": true,
+    "noteMetaDoc0": {
+      "active": true,
+      "label": ["Monatlich", "Täglich","Ad-Hoc", "Wiederkehrend", "Wöchentlich", "Anderer Sitzungs-Rythmus eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Monatlich", "Täglich","Ad-Hoc", "Wiederkehrend", "Wöchentlich", "anderer", "inexistent"],
+      "manualEntryNumber": 5,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 6,
+      "prompt": "Wähle ein Sitzungs-Rythmus",
+      "input": "Trage ein Sitzungs-Rythmus ein (verpflichtend)",
+      "printValue": "Sitzungs-Rhythmus"
+    }
+  },
+
+  "noteMetaDocTagPool": {
+    "active": true,
+    "noteMetaDocTag0": {
+      "active": true,
+      "label": ["Jour-fixe", "Krisensitzung", "Projektsitzung", "Schulung", "Strategiesitzung", "Teamsitzung", "Andere Sitzungs-Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Jour-fixe", "Krisensitzung", "Projektsitzung", "Schulung", "Strategiesitzung", "Teamsitzung", "andere", "inexistent"],
+      "prompt": "Wähle eine Sitzungs-Kategorie",
+      "input": "Trage eine Sitzungs-Kategorie ein (verpflichtend)",
+      "manualEntryNumber": 7,
+      "unknownEntryNumber": null,
+      "nonExistEntryNumber": 8,
+      "second": {
+        "active": true,
+        "Jour-fixe": {
+          "label": ["Abteilung", "Kunden", "Lieferanten", "Mitarbeiter","Management", "Eigene Jour-fixe Bezeichnung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Abteilung", "Kunden", "Lieferanten", "Mitarbeiter","Management", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Jour-fixe Bezeichnung",
+          "input": "Trage eine Jour-fixe Bezeichnung ein (verpflichtend)",
+          "manualEntryNumber": 5,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 6
+        },
+        "Krisensitzung": {
+          "label": ["Ersteinschätzung","Koordination","Kommunikation", "Lenkung", "Prävention", "Problembehandlung","Ressourcen", "Status", "Eigene Krisensitzung Bezeichnung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Ersteinschätzung","Koordination","Kommunikation", "Lenkung", "Prävention", "Problembehandlung","Ressourcen", "Status", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Krisensitzung Bezeichnung",
+          "input": "Trage eine Krisensitzung Bezeichnung ein (verpflichtend)",
+          "manualEntryNumber": 8,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 9
+        },
+        "Projektsitzung": {
+          "label": ["Abschluss", "Entscheidungsfindung", "Erfahrungsausstausch", "Fortschritt", "Kick-off", "Koordination", "Planung", "Problemlösung", "Qualitätssicherung", "Ressourcen", "Risiko", "Status", "Umsetzung", "Ziele", "Eigene Projektsitzung Bezeichnung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Abschluss", "Entscheidungsfindung", "Erfahrungsausstausch", "Fortschritt", "Kick-off", "Koordination", "Planung", "Problemlösung", "Qualitätssicherung", "Ressourcen", "Risiko", "Status", "Umsetzung", "Ziele", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Projektsitzung Bezeichnung",
+          "input": "Trage eine Projektsitzung Bezeichnung ein (verpflichtend)",
+          "manualEntryNumber": 14,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 15
+        },
+        "Schulung": {
+          "label": ["Compliance", "Hard.Skills", "Integration", "Produkt", "Soft-Skills", "Eigene Schulung/Training Bezeichnung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Compliance", "Hard.Skills", "Integration", "Produkt", "Soft-Skills", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Schulung/Training Bezeichnung",
+          "input": "Trage ein Schulung/Training Bezeichnung ein (verpflichtend)",
+          "manualEntryNumber": 5,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 6
+        },
+        "Strategiesitzung": {
+          "label": ["Finanz", "Funktional", "Geschäftsbereich", "Inovation", "Kommunikation", "Unternehmen", "Wachstum", "Eigene Strategiesitzung Bezeichnung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Finanz", "Funktional", "Geschäftsbereich", "Inovation", "Kommunikation", "Unternehmen", "Wachstum", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Strategiesitzung Bezeichnung",
+          "input": "Trage eine Strategiesitzung Bezeichnung ein (verpflichtend)",
+          "manualEntryNumber": 7,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 8
+        },
+        "Teamsitzung": {
+          "label": ["Entscheidung", "Information","Kreative","Planung", "Problemlösung","Rückblick", "Eigene Teamsitzung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Entscheidung", "Information","Kreative","Planung", "Problemlösung","Rückblick", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Teamsitzung Bezeichnung",
+          "input": "Trage eine Teamsitzung Bezeichnung ein (verpflichtend)",
+          "manualEntryNumber": 6,
+          "unknownEntryNumber": null,
+          "nonExistEntryNumber": 7
+        }
+      }
+    }
+  },
+
+  "noteExpandPool": {
+    "active": true,
+    "tableFirstRowTitle": "Kategorie:",
+    "tableSecondRowTitle": "Wert:",
+    "noteExpand0": {
+      "active": true,
+      "label": ["Moderator eintragen", "Moderator unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zum Moderator",
+      "input": "Trage ein Moderator ein (verpflichtend)",
+      "printValue": "Moderator"
+    },
+
+    "noteExpand1": {
+      "active": true,
+      "label": ["Protokollführung eintragen", "Protokollführung unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zur Protokollführung",
+      "input": "Trage die Protokollführung ein (verpflichtend)",
+      "printValue": "Protokollführung"
+    },
+    "noteExpand2": {
+      "active": true,
+      "label": ["Sitzungsdauer eintragen", "Sitzungsdauer unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zur Sitzungsdauer",
+      "input": "Trage die Sitzungsdauer ein (verpflichtend)",
+      "printValue": "Sitzungsdauer"
+    },
+    "noteExpand3": {
+      "active": true,
+      "label": ["Hybrid", "Physisch", "Virtuell", "Art der Durchführung eintragen", "Art der Durchführung unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Hybrid", "Physisch", "Virtuell", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 3,
+      "unknownEntryNumber": 4,
+      "nonExistEntryNumber": 5,
+      "prompt": "Wähle einen Eintrag zur Art der Durchführung ",
+      "input": "Trage die Art der Durchführung ein (verpflichtend)",
+      "printValue": "Durchführung"
+    },
+    "noteExpand4": {
+      "active": true,
+      "label": ["Büro", "jitsi", "Sitzungszimmer", "Teams", "Webex", "Zoom", "Durchführungsort eintragen", "Durchführungsort unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Büro", "jitsi", "Sitzungszimmer", "Teams", "Webex", "Zoom", "eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 6,
+      "unknownEntryNumber": 7,
+      "nonExistEntryNumber": 8,
+      "prompt": "Wähle einen Eintrag zum Durchführungsort",
+      "input": "Trage den Durchführungsort ein (verpflichtend)",
+      "printValue": "Durchführungsort"
+    },
+    "noteExpand5": {
+      "active": true,
+      "label": ["Teilnehmer eintragen", "Teilnehmer unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 0,
+      "unknownEntryNumber": 1,
+      "nonExistEntryNumber": 2,
+      "prompt": "Wähle einen Eintrag zu den Teilnehmer",
+      "input": "Trage die Teilnehmewr der Sitzung ein (verpflichtend)",
+      "printValue": "Teilnehmerliste"
+    },
+    "noteExpand6": {
+      "active": true,
+      "label": ["Verteiler eintragen", "Verteiler unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
+      "manualEntryNumber": 6,
+      "unknownEntryNumber": 7,
+      "nonExistEntryNumber": 8,
+      "prompt": "Wähle einen Eintrag zu Verteiler",
+      "input": "Trage die Personen ein, die die Notiz erhalten (verpflichtend)",
+      "printValue": "Verteilerliste"
+    }
+  },
+
+  "sampleContentPool": {
+    "active": true,
+    "sampleContent0": {
+      "active": true,
+      "value": "%%Hier können ausführliche Informationen zur Sitzung eingetragen werden. Nachfolgend einige Hinweise zum möglichen Inhalt.%%\n\n"
+    },
+    "sampleContent1": {
+      "active": true,
+      "value": "%%**Grunddaten zur Sitzung**%%\n%%Grunddaten zur Sitzung wie:%%\n%%*anwesende, abwesende, entschuldigte und unentschuldigte Personen*%%\n\n"
+    },
+    "sampleContent2": {
+      "active": true,
+      "value": "%%**Behandelte Themen:**%%\n%% behandelt eine detailierte Traktanden Beschreibung:%%\n%%*Traktandum, ,Vorgaben, Diskusionen, Entscheide, To-Do's.%%\n\n"
+    },
+    "sampleContent3": {
+      "active": true,
+      "value": "%%**Sonstiges:**%%\n%%Sonstiges behandelt relevante Themen oder Anmerkungen, die nicht direkt zu den Traktanden gehören.%%\n\n"
+    },
+    "sampleContent4": {
+      "active": true,
+      "value": "%%**Nächste Sitzung:**%%\n%%Nächste Sitzung behandelt, sofern bekannt, das Datum und den Ort der nächsten Sitzung.%%\n\n"
+    },
+    "sampleContent5": {
+      "active": true,
+      "value": "%%**Hinweise zur Anwendung:**%%\n%%Passe Details an Kanal, Zielgruppe und Rahmenbedingungen an. Halte die Beschreibung konsistent, klar und objektiv.%%\n"
+    }
+  }
+}

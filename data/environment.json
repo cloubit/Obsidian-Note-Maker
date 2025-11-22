@@ -68,7 +68,7 @@
     "noteExpand0": {
       "active": true,
       "label": ["Dokumentenbezeichnung eintragen", "Dokumentenbezeichnung unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -79,7 +79,7 @@
     "noteExpand1": {
       "active": true,
       "label": ["Verantwortliche Person eintragen", "Verantwortliche Person unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -90,7 +90,7 @@
     "noteExpand2": {
       "active": true,
       "label": ["Governance, Risiko und Compliance", "Software- und Produktmanagement", "Softwareentwicklung und -betrieb", "IT-Infrastruktur und Betrieb", "IT-Sicherheit und Datenschutz", "Datenmanagement und Analytics", "Architektur und Standards", "Personal und Organisation", "Finanzen und Beschaffung", "Rechtliche und ethische Aspekte", "Diverse Gültigkeitsbereiche", "Anderer Gültigkeitsbereich eintragen", "Gültigkeitsbereich unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Governance, Risiko und Compliance", "Software- und Produktmanagement", "Softwareentwicklung und -betrieb", "IT-Infrastruktur und Betrieb", "IT-Sicherheit und Datenschutz", "Datenmanagement und Analytics", "Architektur und Standards", "Personal und Organisation", "Finanzen und Beschaffung", "Rechtliche und ethische Aspekte", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Governance, Risiko und Compliance", "Software- und Produktmanagement", "Softwareentwicklung und -betrieb", "IT-Infrastruktur und Betrieb", "IT-Sicherheit und Datenschutz", "Datenmanagement und Analytics", "Architektur und Standards", "Personal und Organisation", "Finanzen und Beschaffung", "Rechtliche und ethische Aspekte", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 12,
       "unknownEntryNumber": 13,
       "nonExistEntryNumber": 14,
@@ -101,7 +101,7 @@
     "noteExpand3": {
       "active": true,
       "label": ["ISO/IEC 27018 (personenbezogene Daten in der Cloud)", "ISO/IEC 27001 (Informationssicherheitsmanagement)", "ISO/IEC 27002 (Sicherheitsleitlinien)", "ISO/IEC 27005 (Informationssicherheitsrisikomanagement)", "ISO/IEC 27006 (Anforderungen an Zertifizierungsstellen)", "ISO/IEC 27017 (Cloud-Sicherheit)", "ISO/IEC 27018 (Datenschutz in der Cloud)", "ISO/IEC 27034 (Application Security)", "ISO/IEC 27701 (Privacy Information Management)", "ISO/IEC 31000 (Risikomanagement)", "DSGVO / DSG (Datenschutz)", "IT-Grundschutz (BSI, Deutschland)", "NIST SP 800-53 (USA)", "NIST CSF (Cybersecurity Framework USA)", "COBIT (IT-Goverance und -Kontrollen)", "CSA CCM (Cloud Control Matrix)", "Diverse relevante Standards", "Relevanter Standard eintragen", "Relevanter Standard unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["ISO/IEC 27018","ISO/IEC 27001", "ISO/IEC 27002", "ISO/IEC 27005", "ISO/IEC 27006", "ISO/IEC 27017", "ISO/IEC 27018", "ISO/IEC 27034", "ISO/IEC 27701", "ISO/IEC 31000", "DSGVO / DSG", "IT-Grundschutz", "NIST SP 800-53", "NIST CSF", "COBIT", "CSA CCM", "diverse","eintragen", "unbekannt", "inexistent"],
+      "value": ["ISO/IEC 27018","ISO/IEC 27001", "ISO/IEC 27002", "ISO/IEC 27005", "ISO/IEC 27006", "ISO/IEC 27017", "ISO/IEC 27018", "ISO/IEC 27034", "ISO/IEC 27701", "ISO/IEC 31000", "DSGVO / DSG", "IT-Grundschutz", "NIST SP 800-53", "NIST CSF", "COBIT", "CSA CCM", "diverse","eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 17,
       "unknownEntryNumber": 18,
       "nonExistEntryNumber": 19,
@@ -112,7 +112,7 @@
     "noteExpand4": {
       "active": true,
       "label": ["Sissach", "Diverse Standorte", "Anderer Standort eintragen", "Standort unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Sissach", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Sissach", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 2,
       "unknownEntryNumber": 3,
       "nonExistEntryNumber": 4,

@@ -122,7 +122,7 @@
     "noteExpand0": {
       "active": true,
       "label": ["Vollständiger Name eintragen", "Namen unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -133,7 +133,7 @@
     "noteExpand1": {
       "active": true,
       "label": ["Künstlername eintragen", "Künstlername unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -144,7 +144,7 @@
     "noteExpand2": {
       "active": true,
       "label": ["Geburtsdatum oder Jahr eintragen", "Geburtsdatum / Jahr unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -155,7 +155,7 @@
     "noteExpand3": {
       "active": true,
       "label": ["Todesdatum oder Jahr eintragen", "Todesdatumdatum / Jahr unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
@@ -166,7 +166,7 @@
     "noteExpand4": {
       "active": true,
       "label": ["Deutsch", "Englisch", "Französisch", "Italienisch", "Spanisch", "Diverse Sprachen", "Inhalts-Sprache eintragen", "Inhaltssprache unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["Deutsch", "Englisch", "Französisch", "Italienisch", "Spanisch", "diverse", "eintragen", "unbekannt", "inexistent"],
+      "value": ["Deutsch", "Englisch", "Französisch", "Italienisch", "Spanisch", "diverse", "eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 6,
       "unknownEntryNumber": 7,
       "nonExistEntryNumber": 8,
@@ -177,7 +177,7 @@
     "noteExpand5": {
       "active": true,
       "label": ["Relevante Werke eintragen", "Relevante Werke unbekannt", "Inexistent (kein Vermerk in der Notiz)"],
-      "value":["eintragen", "unbekannt", "inexistent"],
+      "value": ["eintragen", "unbekannt", "inexistent"],
       "manualEntryNumber": 0,
       "unknownEntryNumber": 1,
       "nonExistEntryNumber": 2,
