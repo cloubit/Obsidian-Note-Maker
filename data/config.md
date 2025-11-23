@@ -1,4 +1,5 @@
 <%*
 // Enter template path
-TemplatePath = "./templates/Obsidian-Note-Maker";
+templatePath = "/Users/username/Obsidian/Notes/Templates/Note-Maker";
+jsonPath = "/data/default.json";
 %>
