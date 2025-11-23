@@ -1,13 +1,13 @@
 <%* await tp.file.include("[[./data/config]]");
 'use strict';
 // Note selection, JSON parsing, and creating basic data types
-const defaultJsonPath = '' + TemplatePath + '/data/default.json';
+const defaultJsonPath = '' + templatePath + jsonPath;
 const fs = require('fs');
 const defaultJson = JSON.parse( fs.readFileSync(defaultJsonPath, 'utf8'));
 const noteMainRangePool = defaultJson.noteMainRangePool
 let noteMainRange = await tp.system.suggester(noteMainRangePool.label, noteMainRangePool.value, false, noteMainRangePool.prompt);
 const noteMainRangeSelected = noteMainRangePool.selection[noteMainRange];
-const noteMainRangeJson = JSON.parse ( fs.readFileSync(TemplatePath + noteMainRangeSelected.noteMainRangeValue, 'utf8'));
+const noteMainRangeJson = JSON.parse ( fs.readFileSync(templatePath + noteMainRangeSelected.noteMainRangeValue, 'utf8'));
 const noteTagsMap = defaultJson.noteTagsMap;
 const noteBasicMap = defaultJson.noteBasicMap;
 const noteSubTitleMap = defaultJson.noteSubTitleMap;
