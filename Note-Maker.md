@@ -274,7 +274,7 @@ const sampleContentPool = noteMainRangeJson.sampleContentPool;
 let sampleContent = [], sampleContentKey = 0;
 if (noteSubTitleMap.active && sampleContentPool.active){
   tR += `\n## ${noteSubTitleMap.detailDescriptionTitle}\n---\n`;
-    // Write a sample note
+  // Write a sample note
   for (const key in sampleContentPool) {
     if (Object.prototype.hasOwnProperty.call(sampleContentPool, key) && key.startsWith('sampleContent') && sampleContentPool[key].active ) {
       tR += `${sampleContentPool[key].value}`;
@@ -282,16 +282,16 @@ if (noteSubTitleMap.active && sampleContentPool.active){
   };
 } else if (!noteSubTitleMap.active && sampleContentPool.active){
   // Write a sample note
-    if (Object.prototype.hasOwnProperty.call(sampleContentPool, key) && key.startsWith('sampleContent') && sampleContentPool[key].active ) {
-      tR += `${sampleContentPool[key].value}`;
-    };
+  if (Object.prototype.hasOwnProperty.call(sampleContentPool, key) && key.startsWith('sampleContent') && sampleContentPool[key].active ) {
+    tR += `${sampleContentPool[key].value}`;
+  };
 } else if (noteSubTitleMap.active && !sampleContentPool.active){
   tR += `\n## ${noteSubTitleMap.detailDescriptionTitle}\n---\n`;
 };
 
 // Write subtitles and additional information
 if (noteSubTitleMap.active && noteExpandPool.active){
-    // Write subtitles and tables Head
+  // Write subtitles and tables Head
   tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n| ${noteExpandPool.tableFirstRowTitle} | ${noteExpandPool.tableSecondRowTitle} |\n|---|---|\n`;
   // Write note options in the table
   for (let i = 0; i < noteExpand.length; i++) {if (noteExpandLabel[i] !== noteExpandNonExist[i]){
@@ -308,22 +308,24 @@ if (noteSubTitleMap.active && noteExpandPool.active){
 };
 
 // Write subtitles and external sources and references
-  if (noteSubTitleMap.active && noteSourcesMap.active){
+if (noteSubTitleMap.active && noteSourcesMap.active){
   tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`
-    // External sources and references writing
-    for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
-      if (sourcesUrl[i] && !urlHttp[i]){tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})\n`
-      } else {
-        tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})\n`
-        };
-    };
-} else if (!noteSubTitleMap.active && noteSourcesMap.active){
   // External sources and references writing
-  for (let i = 0; i < sourcesUrl.length && i < urlHttp.length && i < sourcesTitle.length; i++){
+  for (let i = 0; i < sourcesUrl.length && i < sourcesTitle.length; i++){
     if (sourcesUrl[i] && !urlHttp[i]){
       tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})\n`
-      } else {tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})\n`
-      };
+    } else {
+      tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})\n`
+    };
+  };
+} else if (!noteSubTitleMap.active && noteSourcesMap.active){
+  // External sources and references writing
+  for (let i = 0; i < sourcesUrl.length && i < sourcesTitle.length; i++){
+    if (sourcesUrl[i] && !urlHttp[i]){
+      tR += `${extLink}[${sourcesTitle[i]}](${sourcesUrl[i]})\n`
+    } else {
+        tR += `${extLink}[${sourcesTitle[i]}](${urlHttp[i]}${sourcesUrl[i]})\n`
+    };
   };
 } else if (noteSubTitleMap.active && !noteSourcesMap.active){
   tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`;
@@ -339,52 +341,51 @@ if (noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
   // Write internal references
   if (durabilityMap.active && intRefDefault.active && intRefDefault.durability.active) {
     tR += `[[${contentMark} ${durabilityValue}]], `;
-  if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
-    intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
-    intRefDefault.noteMeta.select.forEach(i => { if (noteMetaLabel[i] !== noteMetaUnknown[i] && noteMetaLabel[i] !== noteMetaNonExist[i]) {tR += `[[${contentMark} ${noteMetaLabel[i]}]], `;} });
+    if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
+      intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
+      intRefDefault.noteMeta.select.forEach(i => { if (noteMetaLabel[i] !== noteMetaUnknown[i] && noteMetaLabel[i] !== noteMetaNonExist[i]) {tR += `[[${contentMark} ${noteMetaLabel[i]}]], `;} });
+    };
+    if (intRefDefault.active) {
+      tR += `[[${contentMark} ${noteMainRange}]], `;
+    };
+    if (noteMetaDocPool.active && intRefMainRange.active && intRefMainRange.noteMetaDoc.active) {
+      intRefMainRange.noteMetaDoc.select.map(i => noteMetaDocLabel[i]);
+      intRefMainRange.noteMetaDoc.select.forEach(i => {if (noteMetaDocLabel[i] !== noteMetaDocUnknown[i] && noteMetaDocLabel[i] !== noteMetaDocNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocLabel[i]}]], `;} });
+    };
+    if (noteMetaDocTagPool.active && intRefMainRange.active && intRefMainRange.noteMetaDocTag.active) {
+      intRefMainRange.noteMetaDocTag.select.map(i => noteMetaDocTagLabel[i]);
+      intRefMainRange.noteMetaDocTag.select.forEach(i => {if (noteMetaDocTagLabel[i] !== noteMetaDocTagUnknown[i] && noteMetaDocTagLabel[i] !== noteMetaDocTagNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocTagLabel[i]}]], `;} });
+    };
+    if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
+      intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
+      intRefMainRange.noteExpand.select.forEach(i => {if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${contentMark} ${noteExpandLabel[i]}]], `;} });
+    };
   };
-  if (intRefDefault.active) {
-    tR += `[[${contentMark} ${noteMainRange}]], `;
-  };
-  if (noteMetaDocPool.active && intRefMainRange.active && intRefMainRange.noteMetaDoc.active) {
-    intRefMainRange.noteMetaDoc.select.map(i => noteMetaDocLabel[i]);
-    intRefMainRange.noteMetaDoc.select.forEach(i => {if (noteMetaDocLabel[i] !== noteMetaDocUnknown[i] && noteMetaDocLabel[i] !== noteMetaDocNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocLabel[i]}]], `;} });
-  };
-  if (noteMetaDocTagPool.active && intRefMainRange.active && intRefMainRange.noteMetaDocTag.active) {
-    intRefMainRange.noteMetaDocTag.select.map(i => noteMetaDocTagLabel[i]);
-    intRefMainRange.noteMetaDocTag.select.forEach(i => {if (noteMetaDocTagLabel[i] !== noteMetaDocTagUnknown[i] && noteMetaDocTagLabel[i] !== noteMetaDocTagNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocTagLabel[i]}]], `;} });
-  };
-  if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
-    intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
-    intRefMainRange.noteExpand.select.forEach(i => {if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${contentMark} ${noteExpandLabel[i]}]], `;} });
-  };
-};
 } else if (!noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
   // Write internal references
   if (durabilityMap.active && intRefDefault.active && intRefDefault.durability.active) {
     tR += `[[${contentMark} ${durabilityValue}]], `;
-  };
-  if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
-    intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
-    intRefDefault.noteMeta.select.forEach(i => { if (noteMetaLabel[i] !== noteMetaUnknown[i] && noteMetaLabel[i] !== noteMetaNonExist[i]) {tR += `[[${contentMark} ${noteMetaLabel[i]}]], `;} });
-  };
-  if (intRefDefault.active) {
-    tR += `[[${contentMark} ${noteMainRange}]], `;
-  };
-  if (noteMetaDocPool.active && intRefMainRange.active && intRefMainRange.noteMetaDoc.active) {
-    intRefMainRange.noteMetaDoc.select.map(i => noteMetaDocLabel[i]);
-    intRefMainRange.noteMetaDoc.select.forEach(i => {if (noteMetaDocLabel[i] !== noteMetaDocUnknown[i] && noteMetaDocLabel[i] !== noteMetaDocNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocLabel[i]}]], `;} });
-  };s
-  if (noteMetaDocTagPool.active && intRefMainRange.active && intRefMainRange.noteMetaDocTag.active) {
-    intRefMainRange.noteMetaDocTag.select.map(i => noteMetaDocTagLabel[i]);
-    intRefMainRange.noteMetaDocTag.select.forEach(i => {if (noteMetaDocTagLabel[i] !== noteMetaDocTagUnknown[i] && noteMetaDocTagLabel[i] !== noteMetaDocTagNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocTagLabel[i]}]], `;} });
-  };
-  if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
-    intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
-    intRefMainRange.noteExpand.select.forEach(i => {if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${contentMark} ${noteExpandLabel[i]}]], `;} });
+    if (noteMetaPool.active && intRefDefault.active && intRefDefault.noteMeta.active) {
+      intRefDefault.noteMeta.select.map(i => noteMetaLabel[i]);
+      intRefDefault.noteMeta.select.forEach(i => { if (noteMetaLabel[i] !== noteMetaUnknown[i] && noteMetaLabel[i] !== noteMetaNonExist[i]) {tR += `[[${contentMark} ${noteMetaLabel[i]}]], `;} });
+    };
+    if (intRefDefault.active) {
+      tR += `[[${contentMark} ${noteMainRange}]], `;
+    };
+    if (noteMetaDocPool.active && intRefMainRange.active && intRefMainRange.noteMetaDoc.active) {
+      intRefMainRange.noteMetaDoc.select.map(i => noteMetaDocLabel[i]);
+      intRefMainRange.noteMetaDoc.select.forEach(i => {if (noteMetaDocLabel[i] !== noteMetaDocUnknown[i] && noteMetaDocLabel[i] !== noteMetaDocNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocLabel[i]}]], `;} });
+    };s
+    if (noteMetaDocTagPool.active && intRefMainRange.active && intRefMainRange.noteMetaDocTag.active) {
+      intRefMainRange.noteMetaDocTag.select.map(i => noteMetaDocTagLabel[i]);
+      intRefMainRange.noteMetaDocTag.select.forEach(i => {if (noteMetaDocTagLabel[i] !== noteMetaDocTagUnknown[i] && noteMetaDocTagLabel[i] !== noteMetaDocTagNonExist[i]) {tR += `[[${contentMark} ${noteMetaDocTagLabel[i]}]], `;} });
+    };
+    if (noteExpandPool.active && intRefMainRange.active && intRefMainRange.noteExpand.active) {
+      intRefMainRange.noteExpand.select.map(i => noteExpandLabel[i]);
+      intRefMainRange.noteExpand.select.forEach(i => {if (noteExpandLabel[i] !== noteExpandUnknown[i] && noteExpandLabel[i] !== noteExpandNonExist[i]) {tR += `[[${contentMark} ${noteExpandLabel[i]}]], `;} });
+    };
   };
 } else if (noteSubTitleMap.active && !intRefDefault.active && !intRefMainRange.active) {
   tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n`;
 };
-
 %>
