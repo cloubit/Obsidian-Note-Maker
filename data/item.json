@@ -39,23 +39,23 @@
     "active": true,
     "noteMetaDocTag0": {
       "active": true,
-      "label": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
-      "value": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "eintragen", "inexistent"],
+      "label": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "Virtualisierung", "Eigene Kategorie eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+      "value": ["Appliance", "Access Point", "Desktop", "Drucker", "Firewall", "Gebäudeautomation", "Laptop", "Mobile", "Router", "Server", "Storage", "Switch", "Telefonie", "USV", "Virtualisierung", "eintragen", "inexistent"],
       "prompt": "Wähle eine Unterkategorie",
       "input": "Trage eine Kategorie ein (verpflichtend)",
       "manualEntryNumber": 14,
       "unknownEntryNumber": null,
       "nonExistEntryNumber": 15,
       "second": {
-        "active": false,
-        "Appliance": {
-          "label": null,
-          "value": null,
-          "prompt": null,
-          "input": null,
-          "manualEntryNumber": null,
+        "active": true,
+        "Virtualisierung": {
+          "label": ["Container", "Virtual-Appliance", "Virtual-Desktop", "Virtual-Server", "Eigene Virtualisierungsumgebung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Container", "Virtual-Appliance", "Virtual-Desktop", "Virtual-Server", "eintragen", "inexistent"],
+          "prompt": "Wähle eine Virtualisierungs Art",
+          "input": "Trage eine Virtualisierungsumgebung ein (verpflichtend)",
+          "manualEntryNumber": 2,
           "unknownEntryNumber": null,
-          "nonExistEntryNumber": null
+          "nonExistEntryNumber": 3
         }
       }
     }
