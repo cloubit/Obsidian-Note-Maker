@@ -85,8 +85,8 @@
           "nonExistEntryNumber": 4
         },
         "Virtualisierung": {
-          "label": ["Container", "Virtual-Machine", "Eigene Virtualisierungsumgebung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
-          "value": ["Container", "Virtual-Machine", "eintragen", "inexistent"],
+          "label": ["Container", "Virtual-Appliance", "Virtual-Desktop", "Virtual-Server", "Eigene Virtualisierungsumgebung eintragen", "Inexistent (kein Vermerk in der Notiz)"],
+          "value": ["Container", "Virtual-Appliance", "Virtual-Desktop", "Virtual-Server", "eintragen", "inexistent"],
           "prompt": "Wähle eine Virtualisierungs Art",
           "input": "Trage eine Virtualisierungsumgebung ein (verpflichtend)",
           "manualEntryNumber": 2,
