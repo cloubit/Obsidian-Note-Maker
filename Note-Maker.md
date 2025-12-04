@@ -213,7 +213,7 @@ while (shortDescriptionMap.active && !shortDescriptionContent) {
   };
 
 // Write down expenses
-tR += `---\n`;
+tR += `---\n\n`;
 // Write the note creation date
 if (noteDateMap.active) {
   tR += `${noteDateMap.createdOn} ${noteDateNow}\n`
@@ -253,27 +253,27 @@ if (noteTagsMap.active && noteMetaDocTagPool.active) {
     if (noteMetaDocTagLabel[i] !== noteMetaDocTagNonExist[i]){tR += `  - ${noteMetaDocTagLabel[i]}\n`};
   };
 };
-tR += `---\n`
+tR += `---\n\n`
 if (noteTitleMap.active && docTitleMap.active || noteTitleMap.active && !docTitleMap.active) {
-  tR += `# ${docTitle}\n---\n`
+  tR += `# ${docTitle}\n---\n\n`
 } else if (!noteTitleMap.active && docTitleMap.active) {
-  tR += `# ${title}\n---\n`
+  tR += `# ${title}\n---\n\n`
 };
 
 // Write subtitles and note teasers
 if (noteSubTitleMap.active && shortDescriptionMap.active) {
-  tR += `\n## ${noteSubTitleMap.shortDescriptionTitle}\n---\n${shortDescriptionContent}\n`;
+  tR += `\n## ${noteSubTitleMap.shortDescriptionTitle}\n---\n\n${shortDescriptionContent}\n`;
 } else if (!noteSubTitleMap.active && shortDescription.active) {
   tR += `\n${shortDescriptionContent}\n`;
 } else if (noteSubTitleMap.active && !shortDescriptionMap.active) {
-  tR += `\n## ${noteSubTitleMap.shortDescriptionTitle}\n---\n`;
+  tR += `\n## ${noteSubTitleMap.shortDescriptionTitle}\n---\n\n`;
 };
 
 // Write subtitles and notes Sample
 const sampleContentPool = noteMainRangeJson.sampleContentPool;
 let sampleContent = [], sampleContentKey = 0;
 if (noteSubTitleMap.active && sampleContentPool.active){
-  tR += `\n## ${noteSubTitleMap.detailDescriptionTitle}\n---\n`;
+  tR += `\n## ${noteSubTitleMap.detailDescriptionTitle}\n---\n\n`;
   // Write a sample note
   for (const key in sampleContentPool) {
     if (Object.prototype.hasOwnProperty.call(sampleContentPool, key) && key.startsWith('sampleContent') && sampleContentPool[key].active ) {
@@ -286,13 +286,13 @@ if (noteSubTitleMap.active && sampleContentPool.active){
     tR += `${sampleContentPool[key].value}`;
   };
 } else if (noteSubTitleMap.active && !sampleContentPool.active){
-  tR += `\n## ${noteSubTitleMap.detailDescriptionTitle}\n---\n`;
+  tR += `\n## ${noteSubTitleMap.detailDescriptionTitle}\n---\n\n`;
 };
 
 // Write subtitles and additional information
 if (noteSubTitleMap.active && noteExpandPool.active){
   // Write subtitles and tables Head
-  tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n| ${noteExpandPool.tableFirstRowTitle} | ${noteExpandPool.tableSecondRowTitle} |\n|---|---|\n`;
+  tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n\n| ${noteExpandPool.tableFirstRowTitle} | ${noteExpandPool.tableSecondRowTitle} |\n|---|---|\n`;
   // Write note options in the table
   for (let i = 0; i < noteExpand.length; i++) {if (noteExpandLabel[i] !== noteExpandNonExist[i]){
     tR += `| ${noteExpand[i].printValue}: | ${noteExpandLabel[i]} |\n`;};
@@ -304,12 +304,12 @@ if (noteSubTitleMap.active && noteExpandPool.active){
     tR += `| ${noteExpand[i].printValue}: | ${noteExpandLabel[i]} |\n`;};
   };
 } else if (noteSubTitleMap.active && !noteExpandPool.active){
-  tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n`;
+  tR += `\n## ${noteSubTitleMap.advancedInfoTitle}\n---\n\n`;
 };
 
 // Write subtitles and external sources and references
 if (noteSubTitleMap.active && noteSourcesMap.active){
-  tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`
+  tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n\n`
   // External sources and references writing
   for (let i = 0; i < sourcesUrl.length && i < sourcesTitle.length; i++){
     if (sourcesUrl[i] && !urlHttp[i]){
@@ -328,7 +328,7 @@ if (noteSubTitleMap.active && noteSourcesMap.active){
     };
   };
 } else if (noteSubTitleMap.active && !noteSourcesMap.active){
-  tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n`;
+  tR += `\n## ${noteSubTitleMap.sourceTitle}\n---\n\n`;
 };
 
 // Writing subtitles and internal references
@@ -337,7 +337,7 @@ const intRefMainRange = noteMainRangeJson.internalReferencesMap;
 const contentMark = noteBasicMap.contentMark
 if (noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
   // Write subtitles
-  tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n`;
+  tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n\n`;
   // Write internal references
   if (durabilityMap.active && intRefDefault.active && intRefDefault.durability.active) {
     tR += `[[${contentMark} ${durabilityValue}]], `;
@@ -386,6 +386,6 @@ if (noteSubTitleMap.active && intRefDefault.active || intRefMainRange.active) {
     };
   };
 } else if (noteSubTitleMap.active && !intRefDefault.active && !intRefMainRange.active) {
-  tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n`;
+  tR += `\n\n## ${noteSubTitleMap.internalSourceTitle}\n---\n\n`;
 };
 %>
